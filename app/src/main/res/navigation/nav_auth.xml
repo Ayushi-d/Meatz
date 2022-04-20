@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.app.meatz.presentation.featureAuth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_signup"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_login_forgotPassword"
+            app:destination="@id/forgetPasswordFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.app.meatz.presentation.featureAuth.register.RegisterFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_signUp_terms"
+            app:destination="@id/pageFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.app.meatz.presentation.featureAuth.forgetPassword.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/pageFragment"
+        android:name="com.app.meatz.presentation.page.PageFragment"
+        android:label="fragment_page"
+        tools:layout="@layout/fragment_page" />
+</navigation>

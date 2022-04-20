@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_9sdp"
+    android:layout_marginBottom="@dimen/_9sdp">
+
+
+    <com.app.meatz.data.utils.swipeReveal.SwipeRevealLayout
+        android:id="@+id/swipRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dragEdge="right"
+        app:mode="normal"
+        tools:ignore="RtlSymmetry">
+
+        <FrameLayout
+            android:id="@+id/flRemove"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/bg_swip">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_trash" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/maincv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/platinum1"
+                app:strokeWidth="0.5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_7sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivProduct"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textColor="@color/heavy_metal"
+                        app:layout_constraintStart_toEndOf="@id/ivProduct"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="Product Name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvOptions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/merlot"
+                        app:layout_constraintStart_toEndOf="@id/ivProduct"
+                        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="Options,1" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivShop"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:scaleType="fitXY"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/ivProduct"
+                        app:layout_constraintTop_toBottomOf="@id/tvOptions" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStoreName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:textColor="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ivShop"
+                        app:layout_constraintStart_toEndOf="@id/ivShop"
+                        app:layout_constraintTop_toTopOf="@id/ivShop"
+                        tools:text="Store Name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/heavy_metal"
+                        app:layout_constraintStart_toStartOf="@id/ivShop"
+                        app:layout_constraintTop_toBottomOf="@id/ivShop"
+                        tools:text="Quantity:3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrice"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/merlot"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivShop"
+                        tools:text="200.00KWD" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductOldPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/heavy_metal"
+                        android:textSize="@dimen/_9ssp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@id/tvPrice"
+                        app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                        tools:text="90 kwd" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+
+    </com.app.meatz.data.utils.swipeReveal.SwipeRevealLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

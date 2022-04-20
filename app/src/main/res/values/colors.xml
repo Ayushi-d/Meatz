@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="colorPrimary">#3D4156</color>
+<!--  <color name="colorPrimaryDark">#811111</color>-->
+  <color name="colorPrimaryDark">#C66463</color>
+  <color name="colorAccent">#03DAC5</color>
+
+<!--  <color name="heavy_metal">#2A2B2A</color>-->
+  <color name="heavy_metal">#3D4156</color>
+
+  <!--  <color name="merlot">#991B1F</color>-->
+  <color name="merlot">#F17877</color>
+
+  <color name="darkblue">#3D4156</color>
+  <color name="cream">#E8E2E2</color>
+
+
+  <color name="black">#000000</color>
+  <color name="mine_shaft">#303030</color>
+<!--  <color name="alabaster">#F8F8F8</color>-->
+  <color name="alabaster">#E8E2E2</color>
+  <color name="grayx">#BCBCBC</color>
+
+    <color name="nickle">#6F6F6F</color>
+    <color name="sonicSilver">#757575</color>
+    <color name="x11GRAY">#BDBDBD</color>
+    <color name="silverSand">#C3C3C3</color>
+    <color name="platinum">#E5E5E5</color>
+    <color name="platinum1">#EBEBEB</color>
+    <color name="cultured">#F3F3F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="davysGray">#585858</color>
+    <color name="davysGray1">#464646</color>
+    <color name="selectedRed">#F17877</color>
+    <color name="lightRed">#E5C6C5</color>
+
+
+
+    <color name="lavenderBlush">#F0E4E5</color>
+    <color name="charlestonGreen">#2A2B2A</color>
+    <color name="eerieBlack">#1A1818</color>
+    <color name="cultured1">#F2F2F2</color>
+
+    <color name="placeholder">#2A2B2AA8</color>
+
+  <color name="lightGray">#D2D1D7</color>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cbFilterCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:button="@drawable/bg_checkbox_filter"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:text="@string/home_fish"
+    android:textColor="@drawable/text_color_filter_cb" />

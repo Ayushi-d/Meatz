@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_4sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cdShop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_85sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        android:layout_margin="@dimen/_1sdp"
+        app:cardElevation="@dimen/_2sdp"
+        android:elevation="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/transparent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShop"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:maxLines="2"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cdShop"
+        tools:text="Shop Name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

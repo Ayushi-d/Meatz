@@ -1,0 +1,461 @@
+<resources>
+    <string name="facebook_app_id">1074218286654056</string>
+    <string name="fb_login_protocol_scheme">fb1074218286654056</string>
+
+    <string name="app_name">Meatz</string>
+
+    <!-- Global start -->
+    <string name="global_cant_connect">Can\'t Connect</string>
+    <string name="global_tab_to_retry">Tap to retry</string>
+    <string name="global_currency">%1$s KWD</string>
+    <string name="currency">KWD</string>
+    <string name="global_cancel">Cancel</string>
+    <string name="global_clear">Clear</string>
+    <string name="global_unavailable">Unavailable !</string>
+    <string name="global_yes">Yes</string>
+    <string name="global_underscore">_</string>
+    <!-- Global end -->
+
+
+    <!-- Network start -->
+    <string name="network_check_connection">Couldn\'t reach server.\nPlease check your connection and try again.</string>
+    <string name="network_server_unreachable">Something went wrong.\nPlease try again.</string>
+    <string name="network_unexpected_response">Sorry. unexpected response from server.</string>
+    <string name="network_service_error">Error code: %1$d\nError message: %2$s</string>
+    <string name="network_no_connection_title">Internet Connection Failed</string>
+    <string name="network_no_connection_msg">Sorry! Due to internet connection failed, so the application is not working. Please check the internet connection.</string>
+    <!-- Network end-->
+
+    <!--InputsValidation start-->
+    <string name="validation_empty_email">Please enter your email</string>
+    <string name="validation_empty_password">Please enter your password</string>
+    <string name="validation_empty_first_name">Please enter your first name</string>
+    <string name="validation_empty_last_name">Please enter your last name</string>
+    <string name="validation_empty_phone">Please enter your phone</string>
+    <string name="validation_empty_confirmed_password">Please enter confirmed password</string>
+    <string name="validation_invalid_password">Password  must be at least  8 characters  </string>
+    <string name="validation_invalid_phone">Please enter a valid phone number (8 digits only)</string>
+    <string name="validation_invalid_email">Please enter a valid email</string>
+    <string name="validation_password_not_match">Confirmed password not match password</string>
+    <string name="validation_terms_conditions">Please accept privacy policy and T&amp;C</string>
+    <!--InputValidation  end-->
+
+    <!-- BaseActivity start -->
+    <string name="base_ok">Ok</string>
+    <string name="base_retry">Try again</string>
+    <string name="base_restart_msg">Ready to update?</string>
+    <string name="base_restart">Restart</string>
+    <!-- BaseActivity end -->
+
+    <!--LanguageSelectionActivity start-->
+    <string name="lanauge_select_your_lanauge">Select your Language</string>
+    <string name="language_arabic">Arabic</string>
+    <string name="language_english">English</string>
+    <!--LanguageSelectionActivity end-->
+
+    <!--AdsActivity start-->
+    <string name="ads_skip">Skip</string>
+    <!--AdsActivity end-->
+
+    <!--MainActivity start-->
+    <string name="main_home">Home</string>
+    <string name="main_offers">Offers</string>
+    <string name="main_myboxes">My Boxes</string>
+    <string name="main_profile">Profile</string>
+    <string name="main_settings">Settings</string>
+    <!--MainActivity end-->
+
+    <!--HomeFragment start-->
+    <string name="home_meat">Meat</string>
+    <string name="home_fish">Fish</string>
+    <string name="home_poultry">Poultry</string>
+    <string name="home_restaurant">Restaurants</string>
+    <string name="home_type_here">Type here</string>
+    <string name="home_our_selection">Our Selection</string>
+    <string name="home_our_box">Our Boxes</string>
+    <string name="home_view_all">View All</string>
+    <string name="home_no_box_msg">There are no boxes added by the admin</string>
+    <string name="home_view_cart">View Cart</string>
+    <string name="home_persons">%1$s Persons</string>
+    <!--HomeFragment end-->
+
+
+    <!--OurSelectionFragment start-->
+    <string name="our_selection">Our Selection</string>
+    <!--OurSelectionFragment end-->
+
+    <!--OurBoxesFragment start-->
+    <string name="our_boxes">Our Boxes</string>
+    <string name="our_boxes_available">Available</string>
+    <!--OurBoxesFragment end-->
+
+    <!--BoxDetailsFragment start-->
+    <string name="box_details_add_to_cart">Add to Cart</string>
+    <string name="box_details_cart">Cart</string>
+    <string name="box_details_max_quantity">You have reached the maximum quantity for this product</string>
+    <string name="box_details_cart_full">Your cart is Full from other store \n you have to clear it to add this item </string>
+    <string name="box_details_item_unavailable">This item is unavailable now </string>
+
+    <!--BoxDetailsFragment end-->
+
+    <!--SearchFragment start-->
+    <string name="search_shops">Shops</string>
+    <string name="search_see_more">See More</string>
+    <string name="search_items">Items</string>
+    <string name="search_no_results">No Result Found!</string>
+    <!--SearchFragment end-->
+
+    <!--SearchResultsFragment start-->
+    <string name="search_results_shops"> Shops</string>
+    <string name="search_results_items">Items</string>
+    <string name="search_results_items_count"> Items</string>
+    <string name="search_results_shops_count"> Shops</string>
+
+    <!--SearchResultsFragment end-->
+
+    <!--LoginFragment start-->
+    <string name="login">Login</string>
+    <string name="login_email_address">Email Address</string>
+    <string name="login_password">Password</string>
+    <string name="login_forget_password">Forgot Password?</string>
+    <string name="login_through">Login through</string>
+    <string name="login_contiue_guest">Continue as guest</string>
+    <string name="login_do_you_have_account">Don\'t have an account?</string>
+    <string name="login_register_now"> <u>Register now</u></string>
+    <string name="login_or">Or</string>
+    <string name="login_social_failure">Login failed, please try again !</string>
+    <!--LoginFragment end-->
+
+    <!--ShopDetailsFragment start-->
+    <string name="shop_details_filterby">Filter By</string>
+    <string name="shop_details_sortby">Sort By</string>
+    <string name="shop_details_newest">Newest</string>
+    <string name="shop_details_price_low_high">Price (Low to High)</string>
+    <string name="shop_details_price_high_low">Price (High to Low)</string>
+    <string name="shop_details_items">Items</string>
+    <string name="shop_details_item">Item</string>
+    <string name="shops__details_no_products_found">There are no Products </string>
+    <string name="shop_details_zero_items">No items</string>
+    <string name="shop_details_submit">Submit</string>
+    <!--SHopDetailsFragment end-->
+
+    <!--RegisterFragment start-->
+    <string name="register">Register</string>
+    <string name="register_first_name">First Name</string>
+    <string name="register_last_name">Last Name</string>
+    <string name="register_email">Email Address</string>
+    <string name="register_phone_number">Phone Number</string>
+    <string name="register_password">Password</string>
+    <string name="register_confirm_password">Confirm Password</string>
+    <string name="register_accept">I accept all</string>
+    <string name="register_privacy_policies">privacy policies and \n</string>
+    <string name="register_terms_conditions">terms &amp; conditions of Meatz</string>
+    <string name="register_have_account">Already have an account?</string>
+    <string name="register_sign_in"><u>Signin</u></string>
+    <string name="register_or">or</string>
+    <string name="register_confirmation">Confirmation</string>
+    <string name="register_successfully_registered">You have successfully registered !</string>
+    <!--RegisterFragment end-->
+
+    <!--ForgetPasswordFragment start-->
+    <string name="forgot_password">Forgot password</string>
+    <string name="forgot_password_msg">Please enter the email address which you registered here</string>
+    <string name="forgot_password_email">Email Address</string>
+    <string name="forgot_password_send">Send Password</string>
+    <string name="forgot_password_dialog_msg">We sent an reset password link On your entered email address</string>
+    <string name="forgot_password_sent">Password sent</string>
+    <!--ForgetPasswordFragment end-->
+
+    <!--shopsFragment start-->
+    <string name="shops_no_found">There are no Shops </string>
+    <!--shopsFragment end-->
+
+    <!--CategoryShopsFragment start-->
+    <string name="category_shops_available">%1$s Shop available</string>
+    <!--CategoryShopsFragment end-->
+
+    <!--ProfileFragment start-->
+    <string name="profile_my_wallet">My Wallet</string>
+    <string name="profile_edit_profile">Edit Profile</string>
+    <string name="profile_myorders">My Orders</string>
+    <string name="profile_wishlist">Wishlist</string>
+    <string name="profile_my_address">My Address</string>
+    <string name="profile_change_password">Change Password</string>
+    <string name="profile_logout">Logout</string>
+    <string name="profile_logout_dialog_msg">Are you sure you want to logout ?</string>
+    <string name="profile_login_first_msg">You have to login first to perform this action !</string>
+    <!--ProfileFragment end-->
+
+    <!--EditProfileFragment start-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile_update">Update</string>
+    <string name="edit_profile_first_name">First Name</string>
+    <string name="edit_profile_last_name">Last Name</string>
+    <string name="edit_profile_phone">Phone Number</string>
+    <string name="edit_profile_profile_update">Profile Updated</string>
+    <string name="edit_profile_dialog_msg">Your Profile has been \n Successfully updated.</string>
+    <string name="edit_profile_ok">Ok</string>
+    <!--EditProfileFragment end-->
+
+
+    <!--ChangePasswordFragment start-->
+    <string name="change_password">Change Password</string>
+    <string name="change_password_old_password">Old Password</string>
+    <string name="change_password_new_password">New Password</string>
+    <string name="change_password_confirm_new_password">Confirm New Password</string>
+    <string name="change_password_update">Password Changed</string>
+    <string name="change_password_dialog_msg">Your password has bee changed\n Successfully</string>
+    <string name="change_password_old_pass_empty">Please enter old password</string>
+    <string name="change_password_new_pass_empty">Please enter new password</string>
+    <string name="change_password_confirmed_new_pass_empty">Please enter new confirmed password</string>
+    <!--ChangePasswordFragment end-->
+
+    <!--WishListFragment start-->
+    <string name="wishlist">Wishlist</string>
+    <string name="wishlist_remove_item">Remove item</string>
+    <string name="wishlist_dialog_msg">Are you sure want to remove \n Item from Wishlist ?</string>
+    <string name="wishlist__details_no_products_found">There are no Products </string>
+    <!--WishListFragment end-->
+
+    <!--MyAddressFragment start-->
+    <string name="myaddress">My Address</string>
+    <string name="myaddress_saved_address">Saved Addresses</string>
+    <string name="myaddress_edit">Edit</string>
+    <string name="myaddress_add_new_address">Add New Address</string>
+    <string name="myaddress_no_address_found">No Address Found!</string>
+    <string name="myaddress_no_address_msg">There are no address in address book \n Please add address</string>
+    <string name="myaddress_block">BLOCK</string>
+    <string name="myaddress_street">STREET</string>
+    <string name="myaddress_building">BUILDING</string>
+    <string name="myaddress_floor">FLOOR</string>
+    <string name="myaddress_delete_address">Delete Address</string>
+    <string name="myaddress_delete_address_msg">Are you sure want to remove\n Address from address book.</string>
+    <!--MyAddressFragment end-->
+
+    <!--AddEditAddressFragment start-->
+    <string name="add_address">Add Address</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="add_address_address_name">Address Name*</string>
+    <string name="add_address_area">Area*</string>
+    <string name="add_address_block">Block*</string>
+    <string name="add_address_street">Street Number*</string>
+    <string name="add_address_house">House Number*</string>
+    <string name="add_address_apartment">Apt. Number</string>
+    <string name="add_address_floor">Floor Number</string>
+    <string name="add_address_instructions">Other Instructions</string>
+    <string name="add_address_empty_address_name">Please enter address name</string>
+    <string name="add_address_empty_area">Please select area</string>
+    <string name="add_address_empty_block">Please enter block</string>
+    <string name="add_address_empty_street">Please enter street no</string>
+    <string name="add_address_empty_house">Please enter house no </string>
+    <!--AddEditAddressFragment end-->
+
+    <!--MyOrdersFragment start-->
+    <string name="myorders">My Orders</string>
+    <string name="myorders_orderid">Order ID</string>
+    <string name="myorders_order_date">Order Date</string>
+    <string name="myorders_items">Items : </string>
+    <string name="myorders_reorder">Reorder</string>
+    <string name="myorders_no_found">There are no orders </string>
+    <!--MyOrdersFragment end-->
+
+
+    <!--OrderDetailsFragment start-->
+    <string name="order_details">Order Details</string>
+    <string name="order_details_order_id">Order ID</string>
+    <string name="order_details_order_date">Order Date</string>
+    <string name="order_details_payment_id">Payment ID</string>
+    <string name="order_details_transaction_id">Transaction ID</string>
+    <string name="order_details_delivery_address">Delivery Address</string>
+    <string name="order_details_order_summary">Your Order Summary</string>
+    <string name="order_details_payment_details">Payment Details</string>
+    <string name="order_details_payment_method">Payment Method</string>
+    <string name="order_details_payment_total">Products Total</string>
+    <string name="order_details_delivery_charge">Delivery Charge</string>
+    <string name="order_details_delivery_type">Delivery Type</string>
+    <string name="order_details_delivery_date">Delivery Date</string>
+    <string name="order_details_delivery_time">Delivery Time</string>
+    <string name="order_details_request_cancellation">Request Cancellation</string>
+    <string name="order_details_request_sent">Request Sent</string>
+    <string name="order_details_discount">Discount</string>
+    <string name="order_details_total">Total</string>
+    <string name="order_details_quantity">Quantity : </string>
+    <string name="order_details_person">Person</string>
+    <string name="order_details_persons">Persons</string>
+    <string name="order_details_n_a">N/A</string>
+    <!--OrderDetailsFragment end-->
+
+    <!--MyBoxDetailsFragment start-->
+    <string name="mybox_create_new_box">Create New Box</string>
+    <string name="mybox_no_box_found">There Is no Saved boxes yet,\n Please add a box &amp; add items</string>
+    <string name="mybox_view">View</string>
+    <string name="mybox_add_to_cart">Add to Cart</string>
+    <string name="mybox_items">Items :</string>
+    <string name="mybox_empty_items">There is no items in box</string>
+    <string name="mybox_delete_box">Delete Box</string>
+    <string name="mybox_delete_box_msg">Are you sure want to remove  Box </string>
+    <string name="mybox_items_unavailable">Items not available</string>
+    <string name="mybox_items_unavailable_msg">May be 1 or 2 Items are not Available right now,\n Rest of your items has been added Your cart.</string>
+    <!--MyBoxDetailsFragment end-->
+
+    <!--NewBoxFragment start-->
+    <string name="newbox_box_name">Box Name</string>
+    <string name="newbox_add_box">Add box</string>
+    <string name="newbox_validate_empty_box_name">Please enter box name</string>
+    <!--NewBoxFragment end-->
+
+    <!--MyBoxDetailsFragment start-->
+    <string name="mybox_details">Box Name</string>
+    <string name="mybox_details_update">Update</string>
+    <string name="mybox_details_quantity">Quantity : </string>
+    <string name="mybox_details_no_items">There is no items in box \n Add Items</string>
+    <!--MyBoxDetailsFragment end-->
+
+    <!--SettingsFragment start-->
+    <string name="settings_notification">Notification</string>
+    <string name="settings_change_language">Change Language</string>
+    <string name="settings_about_meatz">About Meatz</string>
+    <string name="settings_terms">Terms &amp; Conditions</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_contact_us">Contact Us</string>
+    <string name="settings_on">on</string>
+    <string name="settings_off">off</string>
+    <!--SettingsFragment end-->
+
+    <!--ContactusFragment start-->
+    <string name="contactus">Contact Us</string>
+    <string name="contactus_send_message">Send us a message</string>
+    <string name="contactus_send">Send</string>
+    <string name="contactus_name">Name*</string>
+    <string name="contactus_email">Email Address*</string>
+    <string name="contactus_phone">Phone Number*</string>
+    <string name="contactus_message">Message*</string>
+    <string name="contactus_contact_whatsapp">Contact Us on Whatsapp</string>
+    <string name="contactus_validate_message_empty">Please enter your message</string>
+    <string name="contactus_validate_name_empty">Please enter your name</string>
+    <string name="contactus_thanks">Thanks</string>
+    <!--ContactusFragment end-->
+
+    <!--NotificationsFramgnet start-->
+    <string name="notifications">Notifications</string>
+    <string name="notification_empty">There are no notifications</string>
+    <!--NotificationsFragment end-->
+
+    <!--ProductDetailsFragment start-->
+    <string name="product_details_login_first">Please Login First </string>
+    <string name="product_details_add_my_box">Add to My Box</string>
+    <string name="product_details_extras">Extras (optional)</string>
+    <string name="product_details_add_box">Add Box</string>
+    <string name="product_details_add_box_msg">Please add a Box for \n adding the product in box</string>
+    <string name="product_details_add">Add</string>
+    <string name="product_details_box_full_with_other_store">
+       %1$s has products from other store store , you have to clear it to add this item </string>
+    <!--ProductDetailsFragment end-->
+
+
+    <!--CartFragment start-->
+    <string name="cart">Cart</string>
+    <string name="cart_number">%1$s Items in cart</string>
+    <string name="cart_empty">Your cart is empty</string>
+    <string name="cart_checkout">PROCEED TO CHECKOUT</string>
+    <string name="cart_sub_total">Sub Total</string>
+    <string name="cart_continue_shopping">Continue Shopping</string>
+    <string name="cart_continue_as_guest">Continue as a guest</string>
+    <string name="cart_sign_in">Sign in</string>
+    <string name="cart_add_phone_number">Add Phone Number</string>
+    <string name="cart_phone_number">Phone Number*</string>
+    <string name="cart_add">Add</string>
+    <string name="cart_cancel">Cancel</string>
+    <string name="cart_out_stock_dialog_msg">%1$s not available,you need to update your cart to continue</string>
+    <string name="cart_out_of_stock">Out of stock</string>
+    <string name="cart_update">Update</string>
+    <!--CartFragment end-->
+
+    <!--CheckoutFragment start-->
+    <string name="checkout">Checkout</string>
+    <string name="checkout_processed_payment">Proceed to Payment</string>
+    <string name="checkout_payment_method">Payment Method</string>
+    <string name="checkout_cash_on_delivery">Cash on Delivery</string>
+    <string name="checkout_online">Online</string>
+    <string name="checkout_wallet">Wallet</string>
+    <string name="checkout_coupone_code">Coupon Code</string>
+    <string name="checkout_applied">Apply</string>
+    <string name="checkout_enter_here">Enter Here</string>
+    <string name="checkout_validation_empty_coupon">Please enter coupon code</string>
+    <string name="checkout_coupon_used">The coupon has been already used</string>
+    <string name="checkout_coupon_not_used">The coupon doesn’t meet the conditions specified</string>
+    <string name="checkout_validation_empty_address">Please add an address</string>
+    <string name="checkout_validation_select_address">Please select your address</string>
+    <string name="checkout_validation_select_payment">Please select payment method</string>
+    <string name="checkout_validation_select_delivery_type">Please select delivery type</string>
+    <string name="checkout_validation_select_date">Please select order date</string>
+    <string name="checkout_validation_select_time">Please select order time</string>
+    <string name="checkout_promo_code_applied">Promo code Applied!</string>
+    <string name="checkout_invalid_code">Invalid Code!</string>
+    <string name="checkout_total">Total</string>
+    <string name="checkout_discount">Discount</string>
+    <string name="checkout_delivery_charge">Delivery Charge</string>
+    <string name="checkout_product_total">Products Total</string>
+    <string name="checkout_delivery_address">Delivery Address</string>
+    <string name="checkout_add_new_address">Add New Address</string>
+    <string name="checkout_select_address">Select Address</string>
+    <string name="checkout_payment">Proceed to Payment</string>
+    <string name="checkout_submit_order">Submit Order</string>
+    <string name="checkout_box_hint_msg">Boxes will be delivered within 1 to 2 days</string>
+    <string name="checkout_no_address">No Address</string>
+    <string name="checkout_please_add_address">Please Add Address!</string>
+    <string name="checkout_delivery_type">Delivery Type</string>k
+    <string name="checkout_select_date">Select Date</string>
+    <string name="checkout_select_time">Select Time</string>
+    <string name="checkout_to">To</string>
+    <string name="checkout_Express">Express</string>
+    <string name="checkout_normal">Normal</string>
+    <string name="checkout_express_delivery">Express Delivery</string>
+    <string name="checkout_select_address_first">Please select your address first</string>
+    <!--CheckoutFragment end-->
+
+    <!--CheckoutStatusFragment start-->
+    <string name="checkout_status_myorders">My Orders</string>
+    <string name="checkout_status_orderid">Order Id</string>
+    <string name="checkout_status_transactionid">Transaction Id</string>
+    <string name="checkout_status_paymentid">Payment Id</string>
+    <string name="checkout_status_order_sucessfully">Order Successfully</string>
+    <string name="checkout_status_error">Error</string>
+    <string name="checkout_status_try_again">Please try again</string>
+    <string name="checkout_status_try_again_btn">Try again</string>
+    <!--CheckoutStatusFragment end-->
+
+    <!--GuestInfoFragment start-->
+    <string name="guest_info_delivery_address">Delivery Address</string>
+    <string name="guest_info_customer_name">Customer Name*</string>
+    <string name="guest_info_email">Email Address(Optional)</string>
+    <string name="guest_info_phone_number">Phone Number*</string>
+    <string name="guest_info_continue">Continue</string>
+    <string name="guest_info_validate_customer_name">Please enter customer name</string>
+    <!--GuestInfoFragment end-->
+
+    <!--OfferBoxesFragment start-->
+    <string name="offer_boxes_empty">No offers found</string>
+    <string name="offer_boxes_search_results">%1$s Result Found</string>
+    <!--OfferBoxesFragment end-->
+
+    <!--MyWalletFragment start-->
+    <string name="myWallet_balance">Balance</string>
+    <string name="myWallet_recharge_my_wallet">Recharge Your Wallet</string>
+    <string name="myWallet_recharge">Recharge</string>
+    <string name="myWallet_price">.%1$s</string>
+    <string name="myWallet_please_enter_price">Please enter the recharge value</string>
+    <string name="myWallet_recharge_successfully">Recharged Successfully</string>
+    <string name="myWallet">My Wallet</string>
+    <string name="myWallet_recharge_amount">Recharge Amount</string>
+    <!--MyWalletFragment end-->
+
+    <!-- ExceptionActivity start -->
+    <string name="exception_msg">An unexpected error occurred.\nSorry for the inconvenience</string>
+    <string name="exception_restart">Restart App</string>
+    <!-- ExceptionActivity end -->
+
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://bigakash.000webhostapp.com\",\n  }\n}]</string>
+
+
+</resources>

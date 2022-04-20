@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_14sdp"
+    android:id="@+id/PrimaryLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/ivProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvProductName"
+        android:ellipsize="end"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textColor="@color/heavy_metal"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/ivProduct"
+        tools:text="Product Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvProductPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+        android:textAlignment="viewStart"
+        android:textColor="@color/merlot"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        tools:text="KWD 120.00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvProductOldPrice"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tvProductPrice"
+        app:layout_constraintStart_toEndOf="@id/tvProductPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+        tools:text="90 kwd" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:id="@+id/ivFavourite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvProductPrice"
+        app:layout_constraintBottom_toBottomOf="@id/PrimaryLayout"
+        app:srcCompat="@drawable/ic_wishlist_red" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alabaster"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@null"
+    tools:context=".presentation.featureAuth.editProfile.EditProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:text="@string/edit_profile"
+            android:textStyle="bold"
+            android:textColor="@color/heavy_metal"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etFName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/edit_profile_first_name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/edit_profile_last_name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etFName" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:drawableStart="@drawable/ic_telephone"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="@string/edit_profile_phone"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etLName" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/heavy_metal"
+            android:stateListAnimator="@null"
+            android:text="@string/edit_profile_update"
+
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alabaster"
+    tools:context=".presentation.featureAddress.addEditAddress.AddEditAddressFragment">
+
+    <include
+        android:id="@+id/shimmer"
+        layout="@layout/shimmer_add_address" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbarThumbVertical="@null"
+            app:layout_constraintBottom_toTopOf="@id/btnAdd"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@id/btnAdd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:text="@string/add_address"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAddressName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/bg_edittext_editinfo"
+                    android:hint="@string/add_address_address_name"
+                    android:inputType="text"
+                    android:padding="@dimen/_10sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textColorHint="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp" />
+
+                <FrameLayout
+                    android:id="@+id/flArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/bg_edittext_editinfo"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@string/add_address_area"
+                        android:textColor="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        app:srcCompat="@drawable/ic_down_arrow" />
+
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etBlock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_editinfo"
+                        android:hint="@string/add_address_block"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/heavy_metal"
+                        android:textColorHint="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_editinfo"
+                        android:hint="@string/add_address_street"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/heavy_metal"
+                        android:textColorHint="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etHouseNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_editinfo"
+                        android:hint="@string/add_address_house"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/heavy_metal"
+                        android:textColorHint="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etApartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_editinfo"
+                        android:hint="@string/add_address_apartment"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/heavy_metal"
+                        android:textColorHint="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etFloor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext_editinfo"
+                        android:hint="@string/add_address_floor"
+                        android:inputType="number"
+                        android:padding="@dimen/_10sdp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/heavy_metal"
+                        android:textColorHint="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_weight="1" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@drawable/bg_edittext_editinfo"
+                    android:gravity="top|start"
+                    android:hint="@string/add_address_instructions"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/_110sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textColorHint="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/heavy_metal"
+            android:stateListAnimator="@null"
+            android:text="@string/add_address"
+            android:textAllCaps="false"
+            android:textColor="@color/lightRed"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

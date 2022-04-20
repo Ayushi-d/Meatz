@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_5sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:id="@+id/ivBox"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedCornersImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBoxName"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textColor="@color/heavy_metal"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBox"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Box Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNumberPerson"
+        android:textColor="@color/merlot"
+        app:layout_constraintTop_toBottomOf="@id/tvBoxName"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="5Persons" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:id="@+id/ivCircle"
+        app:layout_constraintBottom_toBottomOf="@id/tvBoxPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvBoxName"
+        app:layout_constraintStart_toEndOf="@id/tvNumberPerson"
+        app:srcCompat="@drawable/shape_circle_dark_red" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBoxPrice"
+        android:textColor="@color/merlot"
+        android:layout_marginStart="@dimen/_4sdp"
+        tools:text="100.0KWD"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toEndOf="@id/ivCircle"
+        app:layout_constraintTop_toBottomOf="@id/tvBoxName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBoxOldPrice"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/tvBoxPrice"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvBoxName"
+        app:layout_constraintBottom_toBottomOf="@id/tvBoxPrice"
+        tools:text="kwd 303." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

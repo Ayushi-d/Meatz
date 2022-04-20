@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alabaster"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    tools:context=".presentation.featureBoxes.newBox.NewBoxFragment">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etBoxName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@drawable/bg_edittext_editinfo"
+        android:hint="@string/newbox_box_name"
+        android:inputType="text"
+        android:padding="@dimen/_10sdp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/charlestonGreen"
+        android:textColorHint="@color/placeholder"
+        android:textSize="@dimen/_11ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddBox"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etBoxName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:background="@drawable/bg_merlot_default_btn"
+        android:minWidth="@dimen/_100sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/newbox_add_box"
+        android:textAllCaps="false"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_12ssp" />
+
+</RelativeLayout>

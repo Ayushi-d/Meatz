@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "811030819013",
+    "project_id": "meatz-a924e",
+    "storage_bucket": "meatz-a924e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811030819013:android:607a6e7a8092f675c100ac",
+        "android_client_info": {
+          "package_name": "com.app.meatz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811030819013-b857ugk0ofl2554tl3g5v535j07lcjkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.meatz",
+            "certificate_hash": "97ace28ba029de107a16363d9bdf9c46a7e5be64"
+          }
+        },
+        {
+          "client_id": "811030819013-157jd7cm3dvo9fagkhlipsoq1058ei5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfH6RKJxWlrDCR7SnM7HkPxoZkCTfGXRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811030819013-157jd7cm3dvo9fagkhlipsoq1058ei5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

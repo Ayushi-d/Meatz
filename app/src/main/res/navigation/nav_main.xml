@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.meatz.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_categoryShops"
+            app:destination="@id/categoryShopsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_home_orderDetails"
+            app:destination="@id/orderDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_home_ourSelection"
+            app:destination="@id/ourSelectionFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+        <action
+            android:id="@+id/action_home_ourBoxes"
+            app:destination="@id/ourBoxesFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_home_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_home_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_home_shopDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_home_newBox"
+            app:destination="@id/newBoxFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_home_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.app.meatz.presentation.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profile_myWallet"
+            app:destination="@id/myWalletFragment"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+        <action
+            android:id="@+id/action_profile_edit_profile"
+            app:destination="@id/editProfileFragment"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_profile_change_password"
+            app:destination="@id/changePasswordFragment"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_profile_wishlist"
+            app:destination="@id/wishlistFragment"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_profile_address"
+            app:destination="@id/addressFragment"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_profile_myOrders"
+            app:destination="@id/myOrdersFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/myBoxesFragment"
+        android:name="com.app.meatz.presentation.featureBoxes.myBoxes.MyBoxesFragment"
+        android:label="fragment_my_boxes"
+        tools:layout="@layout/fragment_my_boxes">
+
+        <action
+            android:id="@+id/action_myBox_newBox"
+            app:destination="@id/newBoxFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_myBox_boxDetails"
+            app:destination="@id/myBoxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/shopDetailsFragment"
+        android:name="com.app.meatz.presentation.featureStores.storeDetails.StoreDetailsFragment"
+        android:label="fragment_shop_details"
+        tools:layout="@layout/fragment_store_details">
+        <action
+            android:id="@+id/action_storeDetails_storeDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_storeDetails_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_storeDetails_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_storeDetails_specialBoxDetails"
+            app:destination="@id/offerBoxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <argument
+            android:name="shopId"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.app.meatz.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_settings_contactus"
+            app:destination="@id/contactUsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_settings_page"
+            app:destination="@id/pageFragment2"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryShopsFragment"
+        android:name="com.app.meatz.presentation.featureStores.categoryStores.CategoryStoresFragment"
+        android:label="fragment_category_shops"
+        tools:layout="@layout/fragment_category_stores">
+
+        <action
+            android:id="@+id/action_categoryStores_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_categoryStores_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_categoryStores_cart"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_categoryStores_storeDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/ourSelectionFragment"
+        android:name="com.app.meatz.presentation.featureStores.ourSelection.OurSelectionFragment"
+        android:label="fragment_our_selection"
+        tools:layout="@layout/fragment_our_selection">
+        <action
+            android:id="@+id/action_ourSelection_shopDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/ourBoxesFragment"
+        android:name="com.app.meatz.presentation.featureBoxes.ourBoxes.OurBoxesFragment"
+        android:label="fragment_our_boxes"
+        tools:layout="@layout/fragment_our_boxes">
+        <action
+            android:id="@+id/action_ourBoxes_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_ourBoxes_cart"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/boxDetailsFragment"
+        android:name="com.app.meatz.presentation.featureBoxes.boxDetails.BoxDetailsFragment"
+        android:label="fragment_box_details"
+        tools:layout="@layout/fragment_box_details" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.app.meatz.presentation.featureSearch.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_search_searchResults"
+            app:destination="@id/searchResultsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+        <action
+            android:id="@+id/action_search_shopDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_search_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_search_offerboxDetails"
+            app:destination="@id/offerBoxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_search_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.app.meatz.presentation.featureSearch.searchResults.SearchResultsFragment"
+        android:label="fragment_search_results"
+        tools:layout="@layout/fragment_search_results">
+        <action
+            android:id="@+id/action_searchResults_shopDetails"
+            app:destination="@id/shopDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_searchResults_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_searchResults_offerBoxDetails"
+            app:destination="@id/offerBoxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+
+        <action
+            android:id="@+id/action_searchResults_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.app.meatz.presentation.featureAuth.editProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.app.meatz.presentation.featureAuth.changePassword.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.app.meatz.presentation.wishlist.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist">
+
+        <action
+            android:id="@+id/action_wishlist_boxDetails"
+            app:destination="@id/boxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_wishlist_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.app.meatz.presentation.featureAddress.myAddress.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address">
+
+        <action
+            android:id="@+id/action_addresses_addAddress"
+            app:destination="@id/addEditAddressFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditAddressFragment"
+        android:name="com.app.meatz.presentation.featureAddress.addEditAddress.AddEditAddressFragment"
+        android:label="fragment_add_edit_address"
+        tools:layout="@layout/fragment_add_edit_address" />
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.app.meatz.presentation.featureOrders.myOrders.MyOrdersFragment"
+        android:label="fragment_my_orders"
+        tools:layout="@layout/fragment_my_orders">
+
+        <action
+            android:id="@+id/action_orders_orderDetails"
+            app:destination="@id/orderDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_myOrders_checkout"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.app.meatz.presentation.featureOrders.orderDetails.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details">
+
+        <action
+            android:id="@+id/action_orderDetails_checkout"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBoxFragment"
+        android:name="com.app.meatz.presentation.featureBoxes.newBox.NewBoxFragment"
+        android:label="fragment_new_box"
+        tools:layout="@layout/fragment_new_box" />
+    <fragment
+        android:id="@+id/myBoxDetailsFragment"
+        android:name="com.app.meatz.presentation.featureBoxes.myBoxDetails.MyBoxDetailsFragment"
+        android:label="fragment_my_box_details"
+        tools:layout="@layout/fragment_my_box_details" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.app.meatz.presentation.settings.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/pageFragment2"
+        android:name="com.app.meatz.presentation.page.PageFragment"
+        android:label="fragment_page"
+        tools:layout="@layout/fragment_page" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.app.meatz.presentation.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_notification_orderDetails"
+            app:destination="@id/orderDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_notification_productDetails"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.app.meatz.presentation.productDetails.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details">
+
+        <action
+            android:id="@+id/action_productDetails_newBox"
+            app:destination="@id/newBoxFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.app.meatz.presentation.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart">
+
+        <action
+            android:id="@+id/action_cart_checkout"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_cart_guestInfo"
+            app:destination="@id/guestInfoFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.app.meatz.presentation.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkout_addnewAddress"
+            app:destination="@id/addEditAddressFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_checkout_CheckoutStatus"
+            app:destination="@id/checkoutStatusFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/action_checkout_payment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/guestInfoFragment"
+        android:name="com.app.meatz.presentation.checkout.GuestInfoFragment"
+        android:label="fragment_guest_info"
+        tools:layout="@layout/fragment_guest_info">
+        <action
+            android:id="@+id/action_guestInfo_checkout"
+            app:destination="@id/checkoutFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutStatusFragment"
+        android:name="com.app.meatz.presentation.checkout.CheckoutStatusFragment"
+        android:label="CheckoutStatusFragment"
+        tools:layout="@layout/fragment_checkout_status">
+
+        <action
+            android:id="@+id/action_checkoutStatus_myOrders"
+            app:destination="@id/myOrdersFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popUpTo="@id/homeFragment"
+            app:popExitAnim="@anim/slide_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.app.meatz.presentation.checkout.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_payment_checkoutStatus"
+            app:destination="@id/checkoutStatusFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.app.meatz.presentation.offersBoxes.OffersBoxesFragment"
+        android:label="fragment_offers"
+        tools:layout="@layout/fragment_offers">
+        <action
+            android:id="@+id/action_offers_offersDetails"
+            app:destination="@id/offerBoxDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/offerBoxDetailsFragment"
+        android:name="com.app.meatz.presentation.offersBoxes.OfferBoxDetailsFragment"
+        android:label="OfferBoxDetailsFragment" />
+    <fragment
+        android:id="@+id/myWalletFragment"
+        android:name="com.app.meatz.presentation.myWallet.MyWalletFragment"
+        android:label="fragment_my_wallet"
+        tools:layout="@layout/fragment_my_wallet">
+        <action
+            android:id="@+id/action_myWallet_payment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+
+
+</navigation>

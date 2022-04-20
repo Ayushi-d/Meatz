@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flCategory"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_82sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_82sdp"
+        tools:background="@color/selectedRed">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivCategory"
+            android:scaleType="centerCrop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            tools:text="Shop Name" />
+
+    </FrameLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

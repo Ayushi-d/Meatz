@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cbMybox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:button="@drawable/bg_checkbox_filter"
+    android:paddingHorizontal="@dimen/_8sdp"
+    android:textColor="@color/heavy_metal">
+
+</androidx.appcompat.widget.AppCompatCheckBox>

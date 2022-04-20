@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.app.meatz.presentation.ads.AdsActivity">
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/ivAds"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitXY" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/bg_merlot_default_btn"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:text="@string/ads_skip"
+        android:minWidth="@dimen/_90sdp"
+        android:textAllCaps="false"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_13ssp" />
+
+</FrameLayout>

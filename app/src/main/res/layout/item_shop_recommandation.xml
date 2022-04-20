@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        android:id="@+id/cvShop"
+        app:cardElevation="@dimen/_1sdp"
+        android:layout_margin="@dimen/_1sdp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:id="@+id/ivShop"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStoreName"
+        app:layout_constraintBottom_toBottomOf="@id/cvShop"
+        app:layout_constraintStart_toEndOf="@id/cvShop"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:textColor="@color/heavy_metal"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/cvShop"
+        tools:text="Shop Name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

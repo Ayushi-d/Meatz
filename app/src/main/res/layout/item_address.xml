@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:minHeight="@dimen/_110sdp">
+
+
+    <com.app.meatz.data.utils.swipeReveal.SwipeRevealLayout
+        android:id="@+id/swipRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dragEdge="right"
+        app:mode="normal"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/flRemove"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/bg_swip">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_trash" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/platinum1"
+                app:strokeWidth="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddressName"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/merlot"
+                        android:textSize="@dimen/_13ssp"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvAddressName"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toStartOf="@id/btnEdit"
+                        android:textColor="@color/heavy_metal"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/tvAddress"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/bg_merlot_default_btn"
+                        android:stateListAnimator="@null"
+                        android:text="@string/myaddress_edit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/heavy_metal" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+
+
+    </com.app.meatz.data.utils.swipeReveal.SwipeRevealLayout>
+
+
+</FrameLayout>

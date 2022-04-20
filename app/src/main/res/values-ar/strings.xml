@@ -1,0 +1,459 @@
+<resources>
+
+    <string name="app_name">Meatz</string>
+
+    <!-- Global start -->
+    <string name="global_cant_connect">لا يمكن الإتصال</string>
+    <string name="global_tab_to_retry">اضغط لإعادة المحاولة</string>
+    <string name="global_currency">%1$s د.ك</string>
+    <string name="currency">د.ك</string>
+    <string name="global_cancel">إلغاء</string>
+    <string name="global_clear">حذف</string>
+    <string name="global_unavailable">غير متوفر !</string>
+    <string name="global_yes">نعم</string>
+    <string name="global_underscore">_</string>
+    <!-- Global end -->
+
+    <!-- Network start -->
+    <string name="network_check_connection">تعذر الوصول للخادم.\nبرجاء التحقق من إتصالك ثم حاول مرة أخري.</string>
+    <string name="network_server_unreachable">حدث خطأ ما.\nبرجاء المحاولة مرة أخري.</string>
+    <string name="network_unexpected_response">عذراَ، إستجابة غير متوقعة من الخادم.</string>
+    <string name="network_service_error">كود الخطأ: %1$d\nرسالة الخطأ: %2$s</string>
+    <string name="network_no_connection_title">فشل الاتصال بالإنترنت</string>
+    <string name="network_no_connection_msg">نعتذر بسبب فشل الاتصال بالإنترنت ،لا يعمل التطبيق. يرجى التحقق من اتصال الإنترنت</string>
+    <!-- Network end -->
+
+
+    <!--InputsValidation start-->
+    <string name="validation_empty_email">يرجى إدخال البريد الإلكتروني</string>
+    <string name="validation_invalid_email">يرجى إدخال بريد إلكتروني صحيح</string>
+    <string name="validation_empty_first_name">يرجى إدخال الاسم الأول</string>
+    <string name="validation_empty_last_name">يرجى إدخال الاسم الأخير</string>
+    <string name="validation_empty_phone">يرجى إدخال رقم الهاتف</string>
+    <string name="validation_empty_password">يرجى إدخال كلمة المرور</string>
+    <string name="validation_empty_confirmed_password">يرجى إدخال تأكيد كلمة المرور</string>
+    <string name="validation_invalid_password">كلمة المرور يجب ألا تقل عن 8 أحرف </string>
+    <string name="validation_invalid_phone">يرجى إدخال رقم هاتف مكون من 8 أرقام فقط</string>
+    <string name="validation_password_not_match">تأكيد كلمة المرور لا تتطابق مع كلمة المرور</string>
+    <string name="validation_terms_conditions">يرجى الموافقة علي سياسيه الخصوصيه والشروط والأحكام</string>
+    <!--InputValidation  end-->
+
+    <!-- BaseActivity start -->
+    <string name="base_ok">موافق</string>
+    <string name="base_retry">إعادة المحاولة</string>
+    <string name="base_restart_msg">جاهز للتحديث؟</string>
+    <string name="base_restart">إعادة التشغيل</string>
+
+    <!-- BaseActivity end -->
+
+
+    <!--LanguageSelectionActivity start-->
+    <string name="lanauge_select_your_lanauge">اختر اللغة </string>
+    <string name="language_arabic">العربية</string>
+    <string name="language_english">الإنجليزية</string>
+    <!--LanguageSelectionActivity end-->
+
+    <!--AdsActivity start-->
+    <string name="ads_skip">تخطى</string>
+    <!--AdsActivity end-->
+
+    <!--MainActivity start-->
+    <string name="main_home">الرئيسية</string>
+    <string name="main_offers">العروض</string>
+    <string name="main_myboxes">صندوقي</string>
+    <string name="main_profile">حسابي</string>
+    <string name="main_settings">الإعدادت</string>
+    <!--MainActivity end-->
+
+    <!--HomeFragment start-->
+    <string name="home_meat">لحوم</string>
+    <string name="home_fish">اسماك</string>
+    <string name="home_poultry">دجاج</string>
+    <string name="home_restaurant">مطـاعم</string>
+    <string name="home_type_here">أكتب هنا</string>
+    <string name="home_our_selection">إختيارتنا</string>
+    <string name="home_our_box">صناديقنا</string>
+    <string name="home_view_all">عرض الكل</string>
+    <string name="home_no_box_msg">لا توجد صناديق متاحة حاليا</string>
+    <string name="home_view_cart">عرض السلة </string>
+    <string name="home_persons"> %1$s أشخاص</string>
+    <!--HomeFragment end-->
+
+    <!--OurSelectionFragment start-->
+    <string name="our_selection">إختيارتنا</string>
+    <!--OurSelectionFragment end-->
+
+    <!--OurBoxesFragment start-->
+    <string name="our_boxes">صناديقنا</string>
+    <string name="our_boxes_available">متاح</string>
+    <!--OurBoxesFragment end-->
+
+
+    <!--BoxDetailsFragment start-->
+    <string name="box_details_cart">سلة المشتريات</string>
+    <string name="box_details_add_to_cart">أضف الى السلة</string>
+    <string name="box_details_max_quantity">لقد وصلت لأقصى كمية من هذا المنتج</string>
+    <string name="box_details_cart_full">سلة المشتريات ممتلئة من متجر أخر \n تحتاج لحذفها ﻹضافة هذا المنتج </string>
+    <string name="box_details_item_unavailable">هذا المنتج غير متاح الآن </string>
+    <!--BoxDetailsFragment end-->
+
+    <string name="search_shops">المتاجر</string>
+    <string name="search_see_more">مشاهدة المزيد</string>
+    <string name="search_items">المنتجات</string>
+    <string name="search_no_results">لا يوجد نتائج !</string>
+
+    <!--SearchResultsFragment start-->
+    <string name="search_results_shops">المتاجر</string>
+    <string name="search_results_items">المنتجات</string>
+
+    <string name="search_results_items_count"> منتج</string>
+    <string name="search_results_shops_count"> متجر</string>
+    <!--SearchResultsFragment end-->
+
+    <!--ShopDetailsFragment start-->
+    <string name="shop_details_filterby">تصفية حسب</string>
+    <string name="shop_details_sortby">رتب حسب</string>
+    <string name="shop_details_newest">الأحدث</string>
+    <string name="shop_details_price_low_high">السعر الأقل للأعلى</string>
+    <string name="shop_details_price_high_low">السعر الأعلى للأقل</string>
+    <string name="shop_details_items">منتج</string>
+    <string name="shops__details_no_products_found">لا يوجد منتجات</string>
+    <string name="shop_details_zero_items">لا يوجد منتجات</string>
+    <string name="shop_details_submit">تطبيق</string>
+    <!--SHopDetailsFragment end-->
+
+
+    <!--RegisterFragment start-->
+    <string name="register">تسجيل</string>
+    <string name="register_first_name">الاسم الأول</string>
+    <string name="register_last_name">الاسم الأخير</string>
+    <string name="register_email">البريد الإلكتروني</string>
+    <string name="register_phone_number">رقم الهاتف</string>
+    <string name="register_password">كلمة المرور</string>
+    <string name="register_confirm_password">تأكيد كلمة المرور</string>
+    <string name="register_accept">أوافق علي جميع</string>
+    <string name="register_privacy_policies">سياسات الخصوصية و\n </string>
+    <string name="register_terms_conditions">الشروط و الأحكام</string>
+    <string name="register_have_account">هل لديك حساب؟</string>
+    <string name="register_sign_in"> <u>تسجيل الدخول</u>  </string>
+    <string name="register_or">او</string>
+    <string name="register_confirmation">تأكيد</string>
+    <string name="register_successfully_registered">لقد قمت بالتسجيل بنجاح !</string>
+    <!--RegisterFragment end-->
+
+
+    <!--LoginFragment start-->
+    <string name="login">تسجيل الدخول</string>
+    <string name="login_email_address">البريد الإلكتروني</string>
+    <string name="login_password">كلمة المرور</string>
+    <string name="login_forget_password">نسيت كلمة المرور؟</string>
+    <string name="login_through">تسجيل الدخول من خلال</string>
+    <string name="login_contiue_guest">الاستمرار كزائر</string>
+    <string name="login_do_you_have_account">لا تملك حساب؟</string>
+    <string name="login_register_now"> <u>سجل الآن</u></string>
+    <string name="login_or">او</string>
+    <string name="login_social_failure">فشل في تسجيل الدخول، يرجى المحاولة مرة اخرى !</string>
+    <!--LoginFragment end-->
+
+    <!--ForgetPasswordFragment start-->
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="forgot_password_msg">يرجى إدخال عنوان البريد الإلكترونى الذي قمت بالتسجيل به</string>
+    <string name="forgot_password_email">البريد الإلكتروني</string>
+    <string name="forgot_password_send">إرسال كلمة المرور</string>
+    <string name="forgot_password_dialog_msg">تم إرسال رابط إعادة تعيين كلمة المرور على عنوان بريدك الإلكترونى الذي أدخلته</string>
+    <string name="forgot_password_sent">تم إرسال كلمه المرور</string>
+    <!--ForgetPasswordFragment end-->
+
+    <!--shopsFragment start-->
+    <string name="shops_no_found">لا يوجد متاجر </string>
+    <!--shopsFragment end-->
+
+    <!--CategoryShopsFragment start-->
+    <string name="category_shops_available">%1$s متجر متاح</string>
+    <!--CategoryShopsFragment end-->
+
+    <!--ProfileFragment start-->
+    <string name="profile_my_wallet">محفظتى</string>
+    <string name="profile_edit_profile">تعديل حسابي </string>
+    <string name="profile_myorders">طلباتى</string>
+    <string name="profile_wishlist">المفضلة</string>
+    <string name="profile_my_address">عناوينى</string>
+    <string name="profile_change_password">تغيير كلمة المرور </string>
+    <string name="profile_logout">تسجيل الخروج </string>
+    <string name="profile_logout_dialog_msg">هل أنت متأكد أنك تريد تسجيل الخروج ؟</string>
+    <string name="profile_login_first_msg">من فضلك قم بتسجيل الدخول أولاً </string>
+    <!--ProfileFragment end-->
+
+    <!--EditProfileFragment start-->
+    <string name="edit_profile">تعديل الحساب</string>
+    <string name="edit_profile_update">تعديل</string>
+    <string name="edit_profile_first_name">الاسم الأول</string>
+    <string name="edit_profile_last_name">الاسم الأخير</string>
+    <string name="edit_profile_phone">رقم الهاتف</string>
+    <string name="edit_profile_profile_update">تم تعديل الحساب</string>
+    <string name="edit_profile_dialog_msg">تم تعديل بيانات الحساب بنجاح</string>
+    <string name="edit_profile_ok">حسناً</string>
+    <!--EditProfileFragment end-->
+
+    <!--ChangePasswordFragment start-->
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change_password_old_password">كلمة المرور الحالية </string>
+    <string name="change_password_new_password">كلمة المرور الجديدة</string>
+    <string name="change_password_confirm_new_password">تأكيد كلمة المرور</string>
+    <string name="change_password_update">تم تغيير كلمة المرور</string>
+    <string name="change_password_dialog_msg">تم تغيير كلمة المرور بنجاح</string>
+    <string name="change_password_old_pass_empty">يرجى إدخال كلمة المرور القديمة</string>
+    <string name="change_password_new_pass_empty">يرجى إدخال كلمة المرور الجديدة</string>
+    <string name="change_password_confirmed_new_pass_empty">يرجى إدخال تأكيد كلمة المرور</string>
+    <!--ChangePasswordFragment end-->
+
+    <!--WishListFragment start-->
+    <string name="wishlist">المفضلة</string>
+    <string name="wishlist_remove_item">حذف منتج</string>
+    <string name="wishlist_dialog_msg">هل  انت متأكد من حذف منتج من المفضلة؟</string>
+    <string name="wishlist__details_no_products_found">لا يوجد منتجات </string>
+    <!--WishListFragment end-->
+
+    <!--MyAddressFragment start-->
+    <string name="myaddress">عناوينى</string>
+    <string name="myaddress_saved_address"> عناوين محفوظة</string>
+    <string name="myaddress_edit">تعديل</string>
+    <string name="myaddress_add_new_address">إضافة عنوان جديد</string>
+    <string name="myaddress_no_address_found">لايوجد عناوين متاحة</string>
+    <string name="myaddress_no_address_msg">لايوجد عناوين،  \n يرجى إضافة عنوان جديد</string>
+    <string name="myaddress_block">القطعة</string>
+    <string name="myaddress_street">شارع</string>
+    <string name="myaddress_building">المبنى</string>
+    <string name="myaddress_floor">الطابق</string>
+    <string name="myaddress_delete_address">حذف العنوان</string>
+    <string name="myaddress_delete_address_msg">هل أنت متأكد من حذف العنوان؟</string>
+    <!--MyAddressFragment end-->
+
+
+    <!--AddEditAddressFragment start-->
+    <string name="add_address">إضافة عنوان</string>
+    <string name="edit_address">تعديل عنوان</string>
+    <string name="add_address_address_name">اسم العنوان*</string>
+    <string name="add_address_area">المنطقة*</string>
+    <string name="add_address_block">القطعة*</string>
+    <string name="add_address_street">رقم الشارع*</string>
+    <string name="add_address_house">رقم المبنى* </string>
+    <string name="add_address_apartment">رقم الشقة</string>
+    <string name="add_address_floor">رقم الطابق</string>
+    <string name="add_address_instructions"> معلومات أخرى</string>
+    <string name="add_address_empty_address_name">يرجى إدخال اسم العنوان</string>
+    <string name="add_address_empty_area">يرجى اختيار المنطقة</string>
+    <string name="add_address_empty_block">يرجى إدخال القطعة</string>
+    <string name="add_address_empty_street">يرجى إدخال الشارع</string>
+    <string name="add_address_empty_house">يرجى إدخال رقم المبنى  </string>
+    <!--AddEditAddressFragment end-->
+
+    <!--MyOrdersFragment start-->
+    <string name="myorders">طلباتى</string>
+    <string name="myorders_orderid">رقم الطلب</string>
+    <string name="myorders_order_date">تاريخ الطلب</string>
+    <string name="myorders_items">المنتجات : </string>
+    <string name="myorders_reorder">إعادة الطلب</string>
+    <string name="myorders_no_found">لا توجد طلبات </string>
+    <!--MyOrdersFragment end-->
+
+    <!--OrderDetailsFragment start-->
+    <string name="order_details">تفاصيل الطلب</string>
+    <string name="order_details_order_id">رقم الطلب</string>
+    <string name="order_details_order_date">تاريخ الطلب</string>
+    <string name="order_details_payment_id">رقم المعاملة</string>
+    <string name="order_details_transaction_id">رقم الدفع</string>
+    <string name="order_details_delivery_address">عنوان التوصيل</string>
+    <string name="order_details_order_summary">ملخص الطلب</string>
+    <string name="order_details_payment_details">تفاصيل الدفع</string>
+    <string name="order_details_payment_method">طريقة الدفع</string>
+    <string name="order_details_payment_total">إجمالي المنتجات</string>
+    <string name="order_details_delivery_charge">رسوم التوصيل</string>
+    <string name="order_details_delivery_type">طريقة التوصيل</string>
+    <string name="order_details_delivery_date">تاريخ التوصيل</string>
+    <string name="order_details_delivery_time">معاد التوصيل</string>
+    <string name="order_details_request_cancellation">طلب إالغاء</string>
+    <string name="order_details_request_sent">تم إرسال الطلب</string>
+    <string name="order_details_discount">الخصم</string>
+    <string name="order_details_total">الإجمالى</string>
+    <string name="order_details_quantity">الكمية : </string>
+    <string name="order_details_person"> شخص</string>
+    <string name="order_details_persons"> أشخاص</string>
+    <string name="order_details_n_a">غير متاح</string>
+    <!--OrderDetailsFragment end-->
+
+    <!--MyBoxDetailsFragment start-->
+    <string name="mybox_create_new_box">إنشاء صندوق جديد</string>
+    <string name="mybox_no_box_found">لا يوجد صناديق  مضافة حاليا \n يرجى إضافة صندوق جديد  </string>
+    <string name="mybox_view">عرض</string>
+    <string name="mybox_add_to_cart">أضف إلى السلة</string>
+    <string name="mybox_items">المنتجات :</string>
+    <string name="mybox_empty_items">لايوجد منتجات داخل الصندوق</string>
+    <string name="mybox_delete_box">حذف صندوق </string>
+    <string name="mybox_delete_box_msg">هل أنت متأكد من حذف هذا الصندوق ؟ </string>
+    <string name="mybox_items_unavailable">منتجات غير متاحة</string>
+    <string name="mybox_items_unavailable_msg">ربما منتج أو أكثر غير متاح الآن. \n تم إعادة تعيين سلة المشتريات الخاص بك</string>
+    <!--MyBoxDetailsFragment end-->
+
+    <!--NewBoxFragment start-->
+    <string name="newbox_box_name">اسم الصندوق </string>
+    <string name="newbox_add_box">إضافة صندوق </string>
+    <string name="newbox_validate_empty_box_name">يرجى إدخال اسم الصندوق </string>
+    <!--NewBoxFragment end-->
+
+    <!--MyBoxDetailsFragment start-->
+    <string name="mybox_details">اسم الصندوق</string>
+    <string name="mybox_details_update">تحديث</string>
+    <string name="mybox_details_quantity">الكمية :  </string>
+    <string name="mybox_details_no_items">لايوجد عناصر داخل الصندوق\n قم بإضافة عناصر</string>
+    <!--MyBoxDetailsFragment end-->
+
+
+    <!--SettingsFragment start-->
+    <string name="settings_notification">الإشعارات</string>
+    <string name="settings_change_language">تغيير اللغة</string>
+    <string name="settings_about_meatz">من نحن</string>
+    <string name="settings_terms">الشروط والأحكام</string>
+    <string name="settings_privacy_policy">سياسيه الخصوصية</string>
+    <string name="settings_contact_us">اتصل بنا</string>
+    <string name="settings_on">فتح</string>
+    <string name="settings_off">غلق</string>
+    <!--SettingsFragment end-->
+
+    <!--ContactusFragment start-->
+    <string name="contactus">اتصل بنا</string>
+    <string name="contactus_send_message">ارسل رسالة</string>
+    <string name="contactus_send">إرسال</string>
+    <string name="contactus_name">الاسم *</string>
+    <string name="contactus_email">البريد الإلكترونى *</string>
+    <string name="contactus_phone">رقم الهاتف *</string>
+    <string name="contactus_message">الرسالة *</string>
+    <string name="contactus_contact_whatsapp">تواصل معنا على الواتساب </string>
+    <string name="contactus_validate_message_empty">يرجى إدخال الرسالة</string>
+    <string name="contactus_validate_name_empty">يرجى إدخال الاسم</string>
+    <string name="contactus_thanks">شكرًا</string>
+    <!--ContactusFragment end-->
+
+    <!--ProductDetailsFragment start-->
+    <string name="product_details_login_first">من فضلك قم بتسجيل الدخول أولاً</string>
+    <string name="product_details_add_my_box">أضف الي صندوقي </string>
+    <string name="product_details_extras">إضافات (اختيارى)</string>
+    <string name="product_details_add_box">إضافة صندوق</string>
+    <string name="product_details_add_box_msg">يرجى إضافة صندوق جديد لإضافة المنتج</string>
+    <string name="product_details_add">إضافة</string>
+    <string name="product_details_box_full_with_other_store">
+       %1$s يوجد به منتجات من متجر آخر , تحتاج لحذفها لإضافة هذا المنتج  </string>
+    <!--ProductDetailsFragment end-->
+
+
+    <!--CartFragment start-->
+    <string name="cart">سلة المشتريات</string>
+    <string name="cart_number"> %1$s منتج في السلة</string>
+    <string name="cart_empty">سلة المشتريات فارغه</string>
+    <string name="cart_checkout">الاستمرار للدفع</string>
+    <string name="cart_sub_total">المجموع الفرعى</string>
+    <string name="cart_continue_shopping">الاستمرار في التسوق</string>
+    <string name="cart_continue_as_guest">الاستمرار كزائر</string>
+    <string name="cart_sign_in">تسجيل الدخول</string>
+    <string name="cart_add_phone_number">إضافة رقم الهاتف</string>
+    <string name="cart_phone_number">رقم الهاتف *</string>
+    <string name="cart_add">إضافة</string>
+    <string name="cart_cancel">إلغاء</string>
+    <string name="cart_out_stock_dialog_msg"> %1$s غير متاح , تحتاج لتحديث سله المشتريات للإستمرار</string>
+    <string name="cart_out_of_stock">غير متوفر</string>
+    <string name="cart_update">تحديث</string>
+    <!--CartFragment end-->
+
+    <!--CheckoutFragment start-->
+    <string name="checkout">الدفع</string>
+    <string name="checkout_processed_payment">الاستمرار للدفع</string>
+    <string name="checkout_payment_method">طريقة الدفع</string>
+    <string name="checkout_cash_on_delivery">الدفع عند الاستلام</string>
+    <string name="checkout_online">أونلاين</string>
+    <string name="checkout_wallet">المحفظة</string>
+    <string name="checkout_coupone_code">كود الخصم</string>
+    <string name="checkout_applied">تطبيق</string>
+    <string name="checkout_enter_here">أدخل هنا</string>
+    <string name="checkout_validation_empty_coupon">يرجى إدخال كوبون الخصم</string>
+    <string name="checkout_coupon_used">تم استخدام هذا الكوبون من قبل</string>
+    <string name="checkout_coupon_not_used">الكوبون لايطابق الشروط المحدده</string>
+    <string name="checkout_validation_empty_address">يرجى إضافة عنوان</string>
+    <string name="checkout_validation_select_address">يرجى اختيار عنوان</string>
+    <string name="checkout_validation_select_payment">يرجى إختيار طريقه الدفع</string>
+    <string name="checkout_validation_select_delivery_type">يرجى إختيار طريقة التوصيل</string>
+    <string name="checkout_validation_select_date">يرجى إختيار تاريخ الطلب</string>
+    <string name="checkout_validation_select_time">يرجى إختيار وقت الطلب </string>
+    <string name="checkout_promo_code_applied">تم تطبيق الخصم</string>
+    <string name="checkout_invalid_code">كود الخصم غير صحيح</string>
+    <string name="checkout_total">المجموع الكلى</string>
+    <string name="checkout_discount">الخصم</string>
+    <string name="checkout_delivery_charge">رسوم التوصيل</string>
+    <string name="checkout_product_total">إجمالي المنتجات</string>
+    <string name="checkout_delivery_address">عنوان التوصيل</string>
+    <string name="checkout_add_new_address">إضافة عنوان جديد</string>
+    <string name="checkout_select_address">اختر عنوان</string>
+    <string name="checkout_payment">الاستمرار للدفع</string>
+    <string name="checkout_box_hint_msg">سيتم تسليم الصناديق في خلال يوم الي يومين</string>
+    <string name="checkout_no_address">لا يوجد عنوان</string>
+    <string name="checkout_please_add_address">يرجى إضافة عنوان !</string>
+    <string name="checkout_delivery_type">طريقة التوصيل</string>
+    <string name="checkout_select_date">إختر التاريخ</string>
+    <string name="checkout_select_time">إختر الوقت</string>
+    <string name="checkout_to">حتى</string>
+    <string name="checkout_Express">سريع</string>
+    <string name="checkout_normal">عادى</string>
+    <string name="checkout_express_delivery">توصيل سريع</string>
+    <string name="checkout_submit_order">تأكيد الطلب</string>
+    <string name="checkout_select_address_first">يرجى إختيار العنوان أوﻵ</string>
+    <!--CheckoutFragment end-->
+
+    <!--CheckoutStatusFragment start-->
+    <string name="checkout_status_myorders">طلباتى</string>
+    <string name="checkout_status_orderid">رقم الطلب</string>
+    <string name="checkout_status_transactionid">رقم المعاملة</string>
+    <string name="checkout_status_paymentid">رقم الدفع</string>
+    <string name="checkout_status_order_sucessfully">تم الطلب بنجاح</string>
+    <string name="checkout_status_error">خطأ</string>
+    <string name="checkout_status_try_again">يرجى المحاولة مرة أخرى</string>
+    <string name="checkout_status_try_again_btn">المحاولة مره أخرى</string>
+    <!--CheckoutStatusFragment end-->
+
+    <!--GuestInfoFragment start-->
+    <string name="guest_info_delivery_address">عنوان التوصيل</string>
+    <string name="guest_info_customer_name">اسم العميل*</string>
+    <string name="guest_info_email">البريد الإلكتروني(إختيارى)</string>
+    <string name="guest_info_phone_number">رقم الهاتف*</string>
+    <string name="guest_info_continue">استمرار</string>
+    <string name="guest_info_validate_customer_name">يرجى إدخال اسم العميل</string>
+    <!--GuestInfoFragment end-->
+
+
+    <!--NotificationsFramgnet start-->
+    <string name="notifications">الإشعارات</string>
+    <string name="notification_empty">لايوجد إشعارات</string>
+    <!--NotificationsFragment end-->
+
+    <!--OfferBoxesFragment start-->
+    <string name="offer_boxes_empty">لا توجد عروض</string>
+    <string name="offer_boxes_search_results"> %1$sنتيجة</string>
+    <!--OfferBoxesFragment end-->
+
+    <!--MyWalletFragment start-->
+    <string name="myWallet_balance">الرصيد</string>
+    <string name="myWallet_recharge_my_wallet">شحن محفظتك</string>
+    <string name="myWallet_recharge">شحن</string>
+    <string name="myWallet_price">%1$s.</string>
+    <string name="myWallet_please_enter_price">يرجى إدخال قيمه الشحن</string>
+    <string name="myWallet_recharge_successfully">تم الشحن بنجاح</string>
+    <string name="myWallet">محفظتى</string>
+    <string name="myWallet_recharge_amount">مبلغ الشحن</string>
+    <!--MyWalletFragment end-->
+
+    <!-- ExceptionActivity start -->
+    <string name="exception_msg">حدث خطأ غير متوقع.\nعذراً للإزعاج</string>
+    <string name="exception_restart">إعادة تشغيل التطبيق</string>
+    <!-- ExceptionActivity end -->
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://bigakash.000webhostapp.com\",\n  }\n}]</string>
+
+
+</resources>

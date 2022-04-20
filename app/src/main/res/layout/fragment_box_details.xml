@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@null"
+    tools:context=".presentation.featureBoxes.boxDetails.BoxDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/alabaster">
+
+        <include
+            android:id="@+id/shimmer"
+            layout="@layout/shimmer_our_boxes_details" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/flBoxSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpBoxSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabBoxSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_5sdp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent"
+                    app:tabBackground="@drawable/bg_tab_box_slider"
+                    app:tabGravity="center"
+                    app:tabIndicator="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabPaddingStart="0dp" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBoxName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flBoxSlider"
+                tools:text="Box Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBoxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textColor="@color/merlot"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBoxName"
+                tools:text="KWD 2000.0" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBoxOldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvBoxPrice"
+                app:layout_constraintStart_toEndOf="@id/tvBoxPrice"
+                app:layout_constraintTop_toBottomOf="@id/tvBoxName"
+                tools:text="KWD 2000.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textColor="@color/merlot"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBoxPrice"
+                tools:text="5 Person" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/tvBoxDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvItemsNumber">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivStore"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    tools:background="@color/heavy_metal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    android:textStyle="bold"
+                    tools:text="Store Name" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBoxDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:textColor="@color/davysGray"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toTopOf="@id/lnPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lnStore"
+                tools:text="KWD 2000.0 adada adnjad ajndjka janda jandja jandj jadjandjasdjad jndaja jadnjn adjnjad jadn jandjnadj jadj jadnj jadn jadn jadn jadn jandj jadn jadnj jad jadjandjnaadjnjkadnjadnjadkadnjadkadadnjadkadjandjad jjadjankjadajdn"
+
+                />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/lnAddcart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMinus"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_23ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCount"
+
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/merlot"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    tools:text="12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPlus"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_23ssp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lnAddcart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/heavy_metal"
+                android:orientation="horizontal"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBoxTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/selectedRed"
+                    android:textSize="@dimen/_13ssp"
+                    tools:text="200 Kwd" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/box_details_add_to_cart"
+                    android:textColor="@color/lightRed"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

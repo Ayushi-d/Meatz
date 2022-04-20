@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alabaster"
+        android:paddingTop="@dimen/_20sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shimmer_tvTitle"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:background="@color/x11GRAY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:scrollbarThumbVertical="@null"
+            app:layout_constraintBottom_toTopOf="@id/shimmer_btnRequestCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shimmer_tvTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/shimmer_cvOrderInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:cardBackgroundColor="@color/platinum1"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtOrderId"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtOrderDate"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvOrderId"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtOrderId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvOrderDate"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtOrderId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtPaymentId"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvOrderId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtTransactionId"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvOrderId" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvPaymentId"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtPaymentId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvTransactionId"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtTransactionId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtDeliveryType"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvTransactionId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtDeliveryDate"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvTransactionId" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvDeliveryType"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtDeliveryType" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvDeliveryDate"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtDeliveryType" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtDeliveryTime"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvDeliveryType" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvDeliveryTime"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtDeliveryTime" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_txtDeliveryAdd"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvDeliveryTime" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvDeliveryAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/x11GRAY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_txtDeliveryAdd" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/shimmer_tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:background="@drawable/bg_shimmer_order_status"
+                            android:gravity="center_vertical"
+                            android:minWidth="@dimen/_115sdp"
+                            android:padding="@dimen/_6sdp"
+                            android:paddingStart="@dimen/_11sdp"
+                            android:paddingEnd="@dimen/_6sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvDeliveryAdd" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/shimmer_tvReorder"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:text="@string/myorders_reorder"
+                            app:cardBackgroundColor="@color/x11GRAY"
+                            app:cardCornerRadius="@dimen/_6sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/shimmer_tvStatus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/shimmer_tvDeliveryAdd" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOrderSummary"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_cvOrderInfo" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/shimmer_OrderProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/platinum1"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtOrderSummary"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_12sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/shimmer_ivProduct"
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_65sdp"
+                                android:background="@color/x11GRAY"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/shimmer_tvProductName"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:background="@color/x11GRAY"
+                                android:textColor="@color/heavy_metal"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@id/shimmer_ivProduct"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/shimmer_tvOptions"
+                                android:layout_width="@dimen/_130sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/x11GRAY"
+                                app:layout_constraintStart_toEndOf="@id/shimmer_ivProduct"
+                                app:layout_constraintTop_toBottomOf="@id/shimmer_tvProductName" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/shimmer_ivShop"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/x11GRAY"
+                                app:layout_constraintStart_toEndOf="@id/shimmer_ivProduct"
+                                app:layout_constraintTop_toBottomOf="@id/shimmer_tvOptions" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStoreName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:background="@color/x11GRAY"
+                                app:layout_constraintBottom_toBottomOf="@id/shimmer_ivShop"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/shimmer_ivShop"
+                                app:layout_constraintTop_toTopOf="@id/shimmer_ivShop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/shimmer_tvQuantity"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@color/x11GRAY"
+                                app:layout_constraintStart_toStartOf="@id/shimmer_ivShop"
+                                app:layout_constraintTop_toBottomOf="@id/shimmer_ivShop" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/shimmer_tvPrice"
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@color/x11GRAY"
+                                android:textColor="@color/merlot"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/shimmer_ivShop" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_txtPaymentDetails"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_OrderProduct" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/shimmer_lnPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_txtPaymentDetails">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/x11GRAY" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+
+                            android:background="@color/x11GRAY" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/x11GRAY" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+
+                            android:background="@color/x11GRAY" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/x11GRAY" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+
+                            android:background="@color/x11GRAY" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/x11GRAY" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+
+                            android:background="@color/x11GRAY" />
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shimmer_btnRequestCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/x11GRAY"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

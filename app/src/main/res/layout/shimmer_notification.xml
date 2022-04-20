@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification2"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate2"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg2"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification2"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification3"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate3"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg3"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification3"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification4"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate4"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg4"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification4"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg4" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification5"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate5"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg5"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification5"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification6"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate6"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg6"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification6"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification7"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate7"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg7"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification7"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg7" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification8"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate8"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg8"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification8"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification9"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate9"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg9"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification9"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg9" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shimmer_ivNotification10"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:background="@color/x11GRAY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsg10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toStartOf="@id/shimmer_tvNotificationDate10"
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationMsgg10"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@color/x11GRAY"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp"
+
+                    app:layout_constraintStart_toEndOf="@id/shimmer_ivNotification10"
+                    app:layout_constraintTop_toBottomOf="@id/shimmer_tvNotificationMsg10" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shimmer_tvNotificationDate10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/x11GRAY"
+                    android:minWidth="@dimen/_50sdp"
+                    android:text="2 Hours"
+                    android:textAlignment="center"
+                    android:textColor="@color/x11GRAY"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</ScrollView>

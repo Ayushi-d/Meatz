@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@color/x11GRAY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@color/x11GRAY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/shimmer_ivBox1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCornersImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxName1"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shimmer_ivBox1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvNumberPerson1"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice1"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvNumberPerson1"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName1"
+                app:srcCompat="@drawable/shape_circle_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxPrice1"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toEndOf="@id/ivCircle"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxOldPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice1"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvBoxPrice1"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/shimmer_ivBox2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCornersImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxName2"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shimmer_ivBox2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvNumberPerson2"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCircl2"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice2"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvNumberPerson2"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName2"
+                app:srcCompat="@drawable/shape_circle_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxPrice2"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toEndOf="@id/ivCircl2"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxOldPrice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice2"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvBoxPrice2"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/shimmer_ivBox3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedCornersImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxName3"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shimmer_ivBox3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvNumberPerson3"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCircle3"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice3"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvNumberPerson3"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName3"
+                app:srcCompat="@drawable/shape_circle_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxPrice3"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintStart_toEndOf="@id/ivCircle3"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shimmer_tvBoxOldPrice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/x11GRAY"
+                app:layout_constraintBottom_toBottomOf="@id/shimmer_tvBoxPrice3"
+                app:layout_constraintStart_toEndOf="@id/shimmer_tvBoxPrice3"
+                app:layout_constraintTop_toBottomOf="@id/shimmer_tvBoxName3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.facebook.shimmer.ShimmerFrameLayout>

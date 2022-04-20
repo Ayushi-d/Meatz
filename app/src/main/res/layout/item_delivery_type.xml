@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/rbDeliveryType"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:button="@drawable/bg_radiobtn_sort"
+        android:clickable="false"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="@string/checkout_online"
+        android:textColor="@drawable/text_color_filter_cb"
+        android:textSize="@dimen/_13ssp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDeliveryPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:textColor="@color/heavy_metal"
+        android:textStyle="bold"
+        tools:text="KWD 85.000" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

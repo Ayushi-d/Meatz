@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alabaster"
+    android:fillViewport="true"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    android:scrollbarThumbVertical="@null"
+    tools:context=".presentation.settings.ContactUsFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactus"
+            android:textColor="@color/heavy_metal"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/selectedRed"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtWhatsMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivWhatsapp"
+                    android:text="@string/contactus_contact_whatsapp"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/heavy_metal"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="@string/contactus_send_message"
+            android:textColor="@color/selectedRed"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:hint="@string/contactus_name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:hint="@string/contactus_email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:hint="@string/contactus_phone"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_edittext_editinfo"
+            android:gravity="top"
+            android:hint="@string/contactus_message"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/_90sdp"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/heavy_metal"
+            android:textColorHint="@color/heavy_metal"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/bg_merlot_default_btn"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:stateListAnimator="@null"
+            android:textStyle="bold"
+            android:text="@string/contactus_send"
+            android:textAllCaps="false"
+            android:textColor="@color/heavy_metal"
+            android:textSize="@dimen/_13ssp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>

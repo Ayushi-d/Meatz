@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_18sdp"
+    android:background="@drawable/bg_alert_dialog"
+    android:backgroundTint="@color/white"
+    android:gravity="center_horizontal|center_vertical"
+    android:minWidth="@dimen/_235sdp"
+    android:minHeight="@dimen/_170sdp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="end"
+        android:tint="@color/selectedRed"
+        android:layout_margin="@dimen/_10sdp"
+        app:srcCompat="@drawable/ic_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:textAlignment="center"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        tools:text="Delete Address" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textAlignment="center"
+        android:maxWidth="@dimen/_190sdp"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_11ssp"
+        tools:text="Dialog Message" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/bg_merlot_default_btn"
+        android:minWidth="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:textAllCaps="false"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_12ssp"
+        tools:text="Ok" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

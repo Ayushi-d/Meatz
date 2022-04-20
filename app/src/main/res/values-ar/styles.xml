@@ -1,0 +1,9 @@
+<resources>
+
+
+    <style name="fontFamilyStyle">
+        <item name="fontFamily">@font/almarai_regular</item>
+    </style>
+
+
+</resources>

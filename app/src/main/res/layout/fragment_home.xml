@@ -1,0 +1,242 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alabaster"
+    android:scrollbarThumbVertical="@null"
+    tools:context="com.app.meatz.presentation.home.HomeFragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/shimmer"
+
+            layout="@layout/shimmer_home" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+
+            <FrameLayout
+                android:id="@+id/flSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_searchview_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                app:srcCompat="@drawable/ic_search" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:hint="@string/home_type_here"
+                android:textColorHint="@color/heavy_metal"
+                android:textSize="@dimen/_10ssp" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMainCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flSearch"
+            tools:visibility="gone" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpBanner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvMainCategory" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:background="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vpBanner"
+            app:tabBackground="@drawable/bg_tab_home_banner"
+            app:tabGravity="center"
+            app:tabIndicator="@android:color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabPaddingStart="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlOurSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabBanner">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:id="@+id/tvOurSelection"
+                android:text="@string/home_our_selection"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/heavy_metal" />
+
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/line1"
+                android:layout_below="@id/tvOurSelection"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:background="@color/merlot" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewallSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/home_view_all"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/merlot" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOurselection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOurBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlOurSelection">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tvOurBoxes"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:text="@string/home_our_box"
+                android:textColor="@color/heavy_metal" />
+
+
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:id="@+id/line2"
+                android:layout_below="@id/tvOurBoxes"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:background="@color/merlot" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewallboxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/home_view_all"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/merlot" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOurboxes"
+                android:layout_width="match_parent"
+                android:layout_below="@id/line2"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cdEmptyBox"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@id/line2"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:cardElevation="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        app:srcCompat="@drawable/ic_delivery_box" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_70sdp"
+                        android:text="@string/home_no_box_msg" />
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNewBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlOurBoxes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/createbox" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
