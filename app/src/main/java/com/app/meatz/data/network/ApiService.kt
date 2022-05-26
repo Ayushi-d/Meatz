@@ -51,7 +51,7 @@ interface ApiService {
                                 @Query("filter_by") sort: String): Response<BaseRsm<StoreDetails>>
 
     @GET("featured_stores")
-    suspend fun getFeaturesStores(): Response<BaseRsm<Stores>>
+    suspend fun getFeaturesStores(@Query("sub_category_id") subCategoryID : String): Response<BaseRsm<Stores>>
 
     @GET("search")
     suspend fun search(@Query("keyword") keyword: String, @Query("more") more: Int):

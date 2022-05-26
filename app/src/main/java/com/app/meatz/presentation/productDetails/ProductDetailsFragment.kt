@@ -321,7 +321,6 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
                 ERROR -> {
                     dismissLoading()
                     requireActivity().setSnackbar(binding.ivFav, it.message, true)
-
                 }
                 FAILURE -> {
                     dismissLoading()

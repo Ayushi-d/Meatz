@@ -10,6 +10,7 @@
 
     <include
         android:id="@+id/shimmer"
+        android:visibility="visible"
         layout="@layout/shimmer_category_stores" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

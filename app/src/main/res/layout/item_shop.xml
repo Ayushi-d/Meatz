@@ -23,7 +23,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivShop"
             android:layout_width="match_parent"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:layout_height="match_parent" />
     </com.google.android.material.card.MaterialCardView>
 

@@ -84,7 +84,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), InstallStateUpdatedLis
         }
     }
 
-
     private fun checkIntentData() {
         lifecycleScope.launch {
             delay(2000)
