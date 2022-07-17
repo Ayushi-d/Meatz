@@ -23,7 +23,9 @@ import com.app.meatz.domain.local.ProductsRsm
 import com.app.meatz.domain.remote.Category
 import com.app.meatz.domain.remote.generalResponse.Banner
 import com.app.meatz.domain.remote.generalResponse.ProductData
+import com.app.meatz.domain.remote.shopDetails.StoreCategory
 import com.app.meatz.domain.remote.shopDetails.StoreDetails
+import com.app.meatz.domain.remote.stores.StoreCategories
 import com.app.meatz.presentation.featureStores.StoresViewModel
 import com.app.meatz.presentation.featureStores.storeDetails.adapter.StoreProductsRvAdapter
 import com.app.meatz.presentation.home.MainActivity
@@ -35,6 +37,7 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
     private val filterDialog by lazy { FilterDialog(requireContext()) }
     private val sortDialog by lazy { SortDialog(requireContext()) }
     private val viewModel by viewModels<StoresViewModel>()
+    private var categoryList  = ArrayList<StoreCategory>()
     private val listIsEmpty: MutableLiveData<Boolean> by lazy { MutableLiveData() }
     private var bannerListIsEmpty = false
     private var storeId = 0
@@ -70,7 +73,15 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
                     }
                     it?.data?.let {
                         initStoreView(it)
-                        filterDialog.setCategoriesList(it.categories as ArrayList<Category>)
+                        categoryList.addAll(it.categories)
+                       // filterDialog.setCategoriesList(it.categories as ArrayList<StoreCategory>)
+                        for (i in 0..it.categories.size - 1){
+                            if (it.categories[i].storeSubCategories.size > 0){
+                                for (j in 0..it.categories[i].storeSubCategories.size){
+                                    binding.shopTabLayout.addTab(binding.shopTabLayout.newTab().setText(it.categories[i].storeSubCategories[j].name.en))
+                                }
+                            }
+                        }
                     }
                 }
                 ERROR -> {

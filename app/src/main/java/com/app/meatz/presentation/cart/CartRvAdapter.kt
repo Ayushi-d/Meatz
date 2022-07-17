@@ -1,5 +1,7 @@
 package com.app.meatz.presentation.cart
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import com.app.meatz.R
 import com.app.meatz.core.BaseAdapter
 import com.app.meatz.data.application.ITEM_PRODUCT_TYPE
@@ -23,22 +25,24 @@ class CartRvAdapter : BaseAdapter<ItemCartBinding, ProductData>() {
             tvBoxMinus.setOnClickListener { onViewClicked(it, item, position) }
             tvProductMinus.setOnClickListener { onViewClicked(it, item, position) }
             if (item.type == ITEM_PRODUCT_TYPE)
-                handleProductsView(binding, item)
+                handleProductsView(binding, item,position)
             else
                 handleBoxViews(binding, item)
         }
     }
 
-    private fun handleProductsView(binding: ItemCartBinding, item: ProductData) {
+    private fun handleProductsView(binding: ItemCartBinding, item: ProductData,position: Int) {
         binding.apply {
             rootProduct.visible()
             rootBox.gone()
             ivProduct.loadWithPlaceHolder(item.image, 20)
             tvProductName.text = item.name
-            tvProductPrice.text = root.context.getString(R.string.global_currency, item.price)
+            //Log.d(TAG, "handleProductsView: "+item.price+"double---"+item.price.toDouble()+"option---"+item.options.get(position).price)
+            tvProductPrice.text = root.context.getString(R.string.global_currency, ""+item.price)
             if (item.options.isNotEmpty()) {
                 val options = item.options.joinToString { it -> it.name }
                 tvOptions.text = options
+
             }
             if (item.store != null) {
                 tvStoreName.text = item.store.name

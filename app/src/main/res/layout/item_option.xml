@@ -7,7 +7,6 @@
     android:layout_marginTop="@dimen/_1sdp"
     android:layout_marginBottom="@dimen/_1sdp">
 
-
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/cbOption"
         android:layout_width="wrap_content"

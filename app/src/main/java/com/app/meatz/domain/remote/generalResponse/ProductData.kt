@@ -24,8 +24,8 @@ data class ProductData(
         var count: Int,
         @SerializedName("persons")
         val persons: Int = 0,
-        @SerializedName("options")
-        val options: List<CartProductOption>,
+        @SerializedName("option_items")
+        val options: List<ProductOptionItems>,
         @SerializedName("store")
         val store: StoreData?
 

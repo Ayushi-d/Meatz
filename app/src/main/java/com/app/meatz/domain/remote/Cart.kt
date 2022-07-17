@@ -8,7 +8,7 @@ data class Cart(
         @SerializedName("delivery")
         val delivery: String,
         @SerializedName("products")
-        val products: List<ProductData>,
+        val products: MutableList<ProductData>,
         @SerializedName("subtotal")
         val subtotal: String,
         @SerializedName("total")

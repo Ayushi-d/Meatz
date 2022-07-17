@@ -1,6 +1,7 @@
 package com.app.meatz.presentation.cart
 
 import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -55,7 +56,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                         shimmer.root.gone()
                     }
                     it?.data?.let { cart ->
-                        subTotal = cart.subtotal
+                        subTotal = cart.total
                         refreshCartViews(cart)
                     }
                 }
@@ -83,7 +84,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun initCartRv(productsList: List<ProductData>) {
+    private fun initCartRv(productsList: MutableList<ProductData>) {
         if (productsList.isEmpty()) {
             binding.apply {
                 txtSubTotal.gone()
@@ -114,7 +115,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                         if (item.count < item.num) {
                             item.count = item.count + 1
                             cartRvAdapter.notifyDataSetChanged()
-                            fillCartUpdatesData(item, i)
+                            fillCartUpdatesData(item, i,true)
                         } else
                             requireActivity().setSnackbar(binding.btncheckout, getString(R.string.box_details_max_quantity), true)
 
@@ -123,7 +124,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                         if (item.count != 1 && item.count != 0) {
                             item.count = item.count - 1
                             cartRvAdapter.notifyDataSetChanged()
-                            fillCartUpdatesData(item, i)
+                             fillCartUpdatesData(item, i,false)
                         }
                     }
                 }
@@ -155,17 +156,17 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
         })
     }
 
-    fun fillCartUpdatesData(item: ProductData, position: Int) {
+    fun fillCartUpdatesData(item: ProductData, position: Int, add: Boolean) {
         val hashmap by lazy { HashMap<String, Any>() }
         val optionsId = ArrayList<Int>()
         if (item.options.isNotEmpty()) {
             item.options.forEach {
                 optionsId.add(it.id)
             }
-            hashmap["options"] = optionsId.joinToString(",") { it -> it.toString().trim() }
+            hashmap["option_items"] = optionsId.joinToString(",") { it -> it.toString().trim() }
         }
         hashmap["product_id"] = item.id
-        hashmap["count"] = item.count
+        hashmap["count"] = if (add) 1 else -1
 
         Log.i("updatedCart", hashmap.entries.toString())
         updateItems(hashmap, position)
@@ -179,7 +180,6 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                         subTotal = it.subtotal
                         refreshCartViews(it)
                         binding.rvCart.scrollToPosition(position)
-
                     }
                 }
                 ERROR -> {
@@ -216,6 +216,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                     }
             } else {
                 val bundle = Bundle()
+                Log.d(TAG, "processedCheckout: total---- "+subTotal)
                 bundle.putString(SUBTOTAL, subTotal)
                 mainController.navigate(R.id.action_cart_checkout, bundle)
             }

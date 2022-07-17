@@ -23,7 +23,8 @@ object RestClient {
 
   //TestUrl=https://linekw.org/meatz/api/
   //LiveUrl=https://meatz-app.com/api/
-  private const val BASE_URL = "http://meatz.testingjunction.tech/api/"
+ // private const val BASE_URL = "http://meatz.testingjunction.tech/api/"
+  private const val BASE_URL = "http://meatz-app.com/api/"
   //private const val BASE_URL = "https://meatz.test/api/"
 
   val api: ApiService by lazy {

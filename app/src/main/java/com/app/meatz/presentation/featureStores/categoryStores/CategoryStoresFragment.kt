@@ -186,7 +186,7 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
     }
 
     private fun initCategoryShopsRv() {
-        val gridlayout = GridLayoutManager(activity, 3)
+        val gridlayout = GridLayoutManager(activity, 1)
         binding.rvCategoryShops.apply {
             layoutManager = gridlayout
             adapter = categoryShopsAdapter

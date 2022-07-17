@@ -148,6 +148,16 @@ abstract class BaseAdapter<VB : ViewBinding, T> : Adapter<ViewHolder>(), Filtera
     notifyDataSetChanged()
   }
 
+  fun filloption(items: List<T>){
+    this.items = items
+    mutableItems.clear()
+    for (i in 0..items.size){
+      mutableItems.addAll(items)
+    }
+    notifyDataSetChanged()
+
+  }
+
   /**
    * Add items to end of list
    * @param items New items to add

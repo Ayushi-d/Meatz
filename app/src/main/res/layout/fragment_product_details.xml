@@ -125,46 +125,48 @@
                     app:layout_constraintTop_toBottomOf="@id/tvProductPrice"
                     tools:text="Produc Description" />
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cvOption"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_12sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_12sdp"
-                    android:visibility="gone"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="@dimen/_10sdp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvProductDescription">
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:id="@+id/cvOption"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_12sdp"-->
+<!--                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_12sdp"-->
+<!--                    android:visibility="gone"-->
+<!--                    app:cardBackgroundColor="@color/white"-->
+<!--                    app:cardCornerRadius="@dimen/_10sdp"-->
+<!--                    app:cardElevation="0dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/tvProductDescription">-->
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp">
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="@dimen/_5sdp">-->
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/txtExtra"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="@dimen/_2sdp"
-                            android:text="@string/product_details_extras"
-                            android:textColor="@color/heavy_metal"
-                            android:textStyle="bold" />
+<!--                        <androidx.appcompat.widget.AppCompatTextView-->
+<!--                            android:id="@+id/txtExtra"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_margin="@dimen/_2sdp"-->
+<!--                            android:text="@string/product_details_extras"-->
+<!--                            android:textColor="@color/heavy_metal"-->
+<!--                            android:textStyle="bold" />-->
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvOptions"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/txtExtra"
                             android:layout_marginTop="@dimen/_7sdp"
-                            app:layout_constraintStart_toStartOf="parent" />
-                    </RelativeLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvProductDescription"
+                            />
+<!--                    </RelativeLayout>-->
+<!--                </com.google.android.material.card.MaterialCardView>-->
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
         </ScrollView>
 
         <androidx.appcompat.widget.LinearLayoutCompat

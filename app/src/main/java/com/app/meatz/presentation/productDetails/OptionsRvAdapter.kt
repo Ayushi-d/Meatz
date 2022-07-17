@@ -1,22 +1,31 @@
 package com.app.meatz.presentation.productDetails
 
-import com.app.meatz.R
+import android.view.View
 import com.app.meatz.core.BaseAdapter
-import com.app.meatz.databinding.ItemOptionBinding
+import com.app.meatz.data.utils.extensions.linearLayoutManager
+import com.app.meatz.databinding.MultiitemOptionBinding
 import com.app.meatz.domain.remote.generalResponse.Option
 
-class OptionsRvAdapter : BaseAdapter<ItemOptionBinding, Option>() {
-    override fun setContent(binding: ItemOptionBinding, item: Option, position: Int) {
+class OptionsRvAdapter : BaseAdapter<MultiitemOptionBinding, Option>() {
+
+    val multiOptionsAdapter by lazy { MultiOptionsRvAdapter() }
+
+    override fun setContent(binding: MultiitemOptionBinding, item: Option, position: Int) {
         binding.apply {
-            tvOptionPrice.text = root.context.getString(R.string.global_currency, item.price)
-            cbOption.text = item.name
+                txtExtra.text = item.name
+                 multiOptionsAdapter.produt = item.productOptionItems
+                multiOptions.apply {
+                    linearLayoutManager()
+                    adapter = multiOptionsAdapter
+                }
 
+            multiOptionsAdapter.setonItemClickListener(object : MultiOptionsRvAdapter.onItemClickListener{
+                override fun onItemClick(view: View, position: Int) {
+                    onViewClicked(view,item,position)
+                }
 
-            cbOption.setOnClickListener {
-                onViewClicked(it, item, position)
-            }
+            })
 
         }
-
     }
 }

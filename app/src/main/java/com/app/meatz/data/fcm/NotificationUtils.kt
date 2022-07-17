@@ -61,7 +61,6 @@ class NotificationUtils(context: Context) : ContextWrapper(context) {
         setShowBadge(true)
         lightColor = 0xFFC9AA26.toInt()
         lockscreenVisibility = VISIBILITY_PUBLIC
-
         val defaultSoundUri = RingtoneManager.getDefaultUri(TYPE_NOTIFICATION)
         val attributes = AudioAttributes.Builder()
             .setUsage(USAGE_NOTIFICATION)

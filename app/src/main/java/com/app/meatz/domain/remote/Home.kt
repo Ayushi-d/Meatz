@@ -2,6 +2,8 @@ package com.app.meatz.domain.remote
 
 
 import android.os.Parcelable
+import com.app.meatz.domain.remote.shopDetails.StoreSubCategories
+import com.app.meatz.domain.remote.stores.SubCategories
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 

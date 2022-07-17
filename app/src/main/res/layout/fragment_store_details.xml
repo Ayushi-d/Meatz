@@ -99,24 +99,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/shopTabLayout"
             app:tabMode="scrollable"
+            android:layout_marginLeft="10dp"
             android:background="@color/transparent"
             app:layout_constraintTop_toBottomOf="@id/clShopInfo">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sub-Category 1"
-                />
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sub-Category 2"
-                />
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sub-Category 3"
-                />
 
         </com.google.android.material.tabs.TabLayout>
 

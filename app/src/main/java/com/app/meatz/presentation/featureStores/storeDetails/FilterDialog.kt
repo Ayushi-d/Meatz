@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatDialog
 import com.app.meatz.data.utils.extensions.linearLayoutManager
 import com.app.meatz.databinding.DialogFilterBinding
 import com.app.meatz.domain.remote.Category
+import com.app.meatz.domain.remote.shopDetails.StoreCategory
 import com.app.meatz.presentation.featureStores.storeDetails.adapter.FilterCategoryRvAdapter
 
 class FilterDialog(context: Context) : AppCompatDialog(context) {
@@ -48,6 +49,8 @@ class FilterDialog(context: Context) : AppCompatDialog(context) {
     fun setCategoriesList(_categoriesList: ArrayList<Category>) {
         filterCategoriesAdapter.fill(_categoriesList)
     }
+
+
 
     fun performSubmit(action: () -> Unit = {}) {
         binding.btnSubmit.setOnClickListener {

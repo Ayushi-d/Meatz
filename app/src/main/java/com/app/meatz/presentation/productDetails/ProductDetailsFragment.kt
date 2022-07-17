@@ -48,6 +48,7 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
     private var optionsPrice = 0.0
     private val df = DecimalFormat("#.000", DecimalFormatSymbols(Locale.US))
     private val myBoxesDialog by lazy { MyBoxesDialog(requireContext()) }
+    private val mainOptions : ArrayList<Int> by lazy { ArrayList() }
     private val selectedOptions: ArrayList<Int> by lazy { ArrayList() }
     private var selectedBoxesId = ""
     private val boxUnAvailableDialog by lazy { AlertDialog(requireContext()) }
@@ -133,32 +134,33 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
         if (options.isNotEmpty()) {
             optionsAdapter.fill(options)
             binding.apply {
-                cvOption.visible()
+                //cvOption.visible()
+                rvOptions.visible()
                 rvOptions.apply {
                     linearLayoutManager()
                     adapter = optionsAdapter
                 }
             }
 
-            optionsAdapter.setOnClickListener { itemview, item, _ ->
-                if (itemview.id == R.id.cbOption) {
 
-                    if (!item.isChecked) {
-                        optionsPrice += item.price.toDouble()
-                        val totaloptionPrice = countLiveData.value?.times(item.price.toDouble())
+            optionsAdapter.setOnClickListener { itemview, item, pos ->
+                //if (itemview.id == R.id.cbOption) {
+                    if (!item.productOptionItems.get(pos).isChecked) {
+                        optionsPrice += item.productOptionItems.get(pos).price.toDouble()
+                        val totaloptionPrice = countLiveData.value?.times(item.productOptionItems.get(pos).price.toDouble())
                         priceLiveData.value = totaloptionPrice?.let { priceLiveData.value?.plus(it) }
-                        selectedOptions.add(item.id)
-                        item.isChecked = true
+                        mainOptions.add(item.id)
+                        selectedOptions.add(item.productOptionItems.get(pos).id)
+                        item.productOptionItems.get(pos).isChecked = true
                     } else {
-                        optionsPrice -= item.price.toDouble()
-                        val totaloptionPrice = countLiveData.value?.times(item.price.toDouble())
+                        optionsPrice -= item.productOptionItems.get(pos).price.toDouble()
+                        val totaloptionPrice = countLiveData.value?.times(item.productOptionItems.get(pos).price.toDouble())
                         priceLiveData.value = totaloptionPrice?.let { priceLiveData.value?.minus(it) }
-                        selectedOptions.remove(item.id)
-                        item.isChecked = false
+                        selectedOptions.remove(item.productOptionItems.get(pos).id)
+                        mainOptions.remove(item.id)
+                        item.productOptionItems.get(pos).isChecked = false
                     }
-
-                }
-
+                //}
             }
         }
     }
@@ -208,7 +210,8 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
         val hashmap by lazy { HashMap<String, Any>() }
         hashmap["product_id"] = productId
         hashmap["count"] = countLiveData.value.toString()
-        hashmap["options"] = selectedOptions.joinToString { it -> it.toString().trim() }
+       // hashmap["options"] = selectedOptions.joinToString { it -> it.toString().trim() }
+        hashmap["option_items"] = selectedOptions.joinToString { it -> it.toString().trim() }
         viewModel.addProductToCart(hashmap).observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 LOADING -> showLoading()

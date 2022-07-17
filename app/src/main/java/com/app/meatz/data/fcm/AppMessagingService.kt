@@ -1,6 +1,7 @@
 package com.app.meatz.data.fcm
 
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_MUTABLE
 import android.app.PendingIntent.FLAG_UPDATE_CURRENT
 import android.util.Log
 import androidx.core.app.NotificationManagerCompat
@@ -49,7 +50,7 @@ class AppMessagingService : FirebaseMessagingService() {
                 val resultIntent = intentFor<MainActivity>(ORDER_ID to data["id"]).clearTask().newTask()
                 stackBuilder.addNextIntent(resultIntent)
                 val pendingIntent =
-                        stackBuilder.getPendingIntent(ORDER_REQUEST_CODE, FLAG_UPDATE_CURRENT or PendingIntent.FLAG_ONE_SHOT)
+                        stackBuilder.getPendingIntent(ORDER_REQUEST_CODE, FLAG_MUTABLE or PendingIntent.FLAG_ONE_SHOT)
                 with(NotificationManagerCompat.from(this)) {
                     pendingIntent?.let {
                         notify(ORDER_REQUEST_CODE, notification.show(data.getValue("body"), it))
