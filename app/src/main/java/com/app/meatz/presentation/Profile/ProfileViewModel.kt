@@ -11,5 +11,9 @@ class ProfileViewModel : ViewModel() {
     fun removerUser() = removeUser()
     fun isUserLogged() = isUser()
     fun getProfileInfo() = loadData { RestClient.api.getUserProfile() }
+    fun deleteAccount() = loadData { RestClient.api.deleteAccount() }
     fun logout() = loadData { RestClient.api.logout() }
+    fun getContacts() = loadData { RestClient.api.getContacts() }
+    fun getPage(pageId: Int) = loadData { RestClient.api.getPageDetails(pageId) }
+    fun getPages() = loadData { RestClient.api.getPages() }
 }

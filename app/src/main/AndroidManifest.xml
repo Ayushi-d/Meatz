@@ -20,17 +20,34 @@
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="UnusedAttribute">
+        <activity
+            android:name=".presentation.splash.SplashVideoMeatz"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="manager" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".presentation.featureAuth.AuthActivity"
             android:exported="true"
             android:screenOrientation="nosensor"
-            android:windowSoftInputMode="stateHidden"
-            />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".presentation.ads.AdsActivity"
             android:exported="true"
@@ -40,12 +57,7 @@
             android:name=".presentation.languageSelection.LanguageSelectionActivity"
             android:exported="true"
             android:screenOrientation="nosensor"
-            android:theme="@style/TransparentActivityTheme">
-
-
-
-        </activity>
-            <!-- Enable debug logging for Performance Monitoring at build time -->
+            android:theme="@style/TransparentActivityTheme"></activity> <!-- Enable debug logging for Performance Monitoring at build time -->
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
@@ -58,19 +70,22 @@
         <meta-data
             android:name="asset_statements"
             android:resource="@string/asset_statements" />
+
         <activity
             android:name=".presentation.splash.SplashActivity"
+            android:exported="true"
             android:noHistory="true"
             android:screenOrientation="nosensor"
             android:theme="@style/SplashTheme"
-            android:windowSoftInputMode="stateHidden"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:windowSoftInputMode="stateHidden">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
             <intent-filter>
                 <action android:name="manager" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -82,25 +97,25 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".presentation.home.MainActivity"
+            android:exported="true"
             android:screenOrientation="nosensor"
-            android:windowSoftInputMode="adjustNothing"
-            android:exported="true">
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="order_id" />
                 <action android:name="order" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
 
-            <intent-filter
-                android:autoVerify = "true">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="http"/>
-                <data  android:host="meatz.testingjunction.tech" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:host="meatz.testingjunction.tech" />
             </intent-filter>
-
         </activity>
 
         <meta-data
@@ -119,7 +134,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

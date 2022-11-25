@@ -39,13 +39,23 @@ data class Store(
         val id: Int,
         @SerializedName("logo")
         val logo: String,
+        @SerializedName("banner")
+        val banner: String,
         @SerializedName("name")
         val name: String,
-        @SerializedName("products")
-        val products: List<ProductData>,
+        @SerializedName("cat_products")
+        val products: List<CatProducts>,
         @SerializedName("products_count")
         val productsCount: Int
 )
+
+data class CatProducts(
+        @SerializedName("products")
+        val products: List<ProductData>,
+        @SerializedName("subcategory")
+        val subCatName: String,
+)
+
 
 data class StoreSubCategories(
         @SerializedName("id")

@@ -10,5 +10,17 @@ data class StoreData(
         @SerializedName("logo")
         val logo: String,
         @SerializedName("name")
-        val name: String
+        val name: String,
+        @SerializedName("banner")
+        val banner: String,
+        @SerializedName("rating")
+        val rating: String,
+        @SerializedName("tags")
+        val tags: List<Tags>
+
 )
+
+data class Tags(
+        @SerializedName("name")
+        val name: String,
+        )

@@ -122,7 +122,7 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
             bannerIndexes.add(i)
         if (bannerList.isNotEmpty() && bannerIndexes.isNotEmpty())
             bannerIndexes.forEachIndexed { index, i ->
-                storesAndBanerList[i] = CategoryStoreRsm(BANNER_TYPE, bannerUrl = bannerList[index].image, bannerType = bannerList[index].model, bannerItemId = bannerList[index].modelId)
+                storesAndBanerList[i] = CategoryStoreRsm(BANNER_TYPE, bannerUrl = bannerList[index].image, bannerType = bannerList[index].model, bannerItemId = bannerList[index].modelId, tags = null)
             }
 
 
@@ -134,7 +134,7 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
 
         storesIndexes.forEachIndexed { index, parentIndex ->
             storesAndBanerList[parentIndex] =
-                    CategoryStoreRsm(ITEM_TYPE, storeUrl = storesList[index].logo, storeName = storesList[index].name, storeId = storesList[index].id)
+                    CategoryStoreRsm(ITEM_TYPE, storeUrl = storesList[index].logo, storeName = storesList[index].name, storeId = storesList[index].id, bannerUrl = storesList[index].banner, tags = storesList[index].tags, rating = storesList[index].rating)
         }
 
         categoryShopsAdapter.fill(storesAndBanerList.toList() as List<CategoryStoreRsm>)
@@ -200,7 +200,7 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
                     return if (categoryShopsAdapter.getItemType(position) == ITEM_TYPE) {
                         1
                     } else
-                        3
+                        1
                 }
             }
         }
@@ -209,8 +209,6 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
             when (item.itemType) {
                 ITEM_TYPE -> {
                     val bundle = Bundle()
-
-
                     bundle.putInt(SHOP_ID, item.storeId)
                     mainController.navigate(R.id.action_categoryStores_storeDetails, bundle)
                 }

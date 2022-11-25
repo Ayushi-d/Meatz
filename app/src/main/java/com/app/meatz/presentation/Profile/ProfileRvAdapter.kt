@@ -15,7 +15,7 @@ class ProfileRvAdapter : BaseAdapter<ItemProfileBinding, ProfileRsm>() {
             swNotifiction.gone()
             if (position == 0) {
                 tvWalletValue.apply {
-                    visible()
+                    //visible()
                     if (walletValue.isNotEmpty())
                         text = binding.root.context.getString(R.string.global_currency, walletValue)
                 }

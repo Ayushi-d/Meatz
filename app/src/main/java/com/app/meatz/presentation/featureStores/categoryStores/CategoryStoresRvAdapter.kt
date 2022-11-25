@@ -16,15 +16,21 @@ class CategoryStoresRvAdapter : BaseAdapter<ItemCategoryStoresBinding, CategoryS
             binding.apply {
                 PrimaryLayout.visible()
                 SecondaryLayout.gone()
-                ivShop.loadWithPlaceHolder(item.storeUrl, 20)
+                ivShop.loadWithPlaceHolder(item.bannerUrl, 20)
+                ivStoreLogo.loadWithPlaceHolder(item.storeUrl, 20)
                 tvStoreName.text = item.storeName
+                ivStoreRating.text = if (item.rating.isNullOrBlank())   "0.0 " else item.rating + " "
+                if (item.tags!!.isNotEmpty())
+
+                    tvStoreTags.text = item.tags!!.joinToString { it.name }
+                else
+                    tvStoreTags.text = "----"
             }
         } else {
             binding.apply {
                 SecondaryLayout.visible()
                 PrimaryLayout.gone()
                 ivBanner.loadWithPlaceHolder(item.bannerUrl, 20)
-
             }
         }
     }

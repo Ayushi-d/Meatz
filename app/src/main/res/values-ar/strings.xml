@@ -179,8 +179,11 @@
     <string name="profile_wishlist">المفضلة</string>
     <string name="profile_my_address">عناوينى</string>
     <string name="profile_change_password">تغيير كلمة المرور </string>
+    <string name="profile_delete_account">حذف الحساب</string>
     <string name="profile_logout">تسجيل الخروج </string>
+    <string name="profile_Delete">حذف الحساب</string>
     <string name="profile_logout_dialog_msg">هل أنت متأكد أنك تريد تسجيل الخروج ؟</string>
+    <string name="profile_delete_dialog_msg">هل أنت متأكد أنك تريد حذف ؟</string>
     <string name="profile_login_first_msg">من فضلك قم بتسجيل الدخول أولاً </string>
     <!--ProfileFragment end-->
 
@@ -337,6 +340,8 @@
     <!--ProductDetailsFragment start-->
     <string name="product_details_login_first">من فضلك قم بتسجيل الدخول أولاً</string>
     <string name="product_details_add_my_box">أضف الي صندوقي </string>
+    <string name="product_details_save_to_basket">حفظ في السلة </string>
+    <string name="product_details_learn_basket">تعرف على المزيد حول باسكت </string>
     <string name="product_details_extras">إضافات (اختيارى)</string>
     <string name="product_details_add_box">إضافة صندوق</string>
     <string name="product_details_add_box_msg">يرجى إضافة صندوق جديد لإضافة المنتج</string>

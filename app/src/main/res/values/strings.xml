@@ -181,8 +181,11 @@
     <string name="profile_wishlist">Wishlist</string>
     <string name="profile_my_address">My Address</string>
     <string name="profile_change_password">Change Password</string>
+    <string name="profile_delete_account">Delete Account</string>
     <string name="profile_logout">Logout</string>
+    <string name="profile_Delete">Delete Account</string>
     <string name="profile_logout_dialog_msg">Are you sure you want to logout ?</string>
+    <string name="profile_delete_dialog_msg">Are you sure you want to Delete the account ?</string>
     <string name="profile_login_first_msg">You have to login first to perform this action !</string>
     <!--ProfileFragment end-->
 
@@ -344,6 +347,8 @@
     <!--ProductDetailsFragment start-->
     <string name="product_details_login_first">Please Login First </string>
     <string name="product_details_add_my_box">Add to My Box</string>
+    <string name="product_details_save_to_basket">Save To Basket</string>
+    <string name="product_details_learn_basket">Learn more about Basket</string>
     <string name="product_details_extras">Extras (optional)</string>
     <string name="product_details_add_box">Add Box</string>
     <string name="product_details_add_box_msg">Please add a Box for \n adding the product in box</string>

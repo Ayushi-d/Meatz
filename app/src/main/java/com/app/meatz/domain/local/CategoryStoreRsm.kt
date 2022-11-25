@@ -1,5 +1,7 @@
 package com.app.meatz.domain.local
 
+import com.app.meatz.domain.remote.generalResponse.Tags
+
 data class CategoryStoreRsm(
         val itemType: String,
         val storeUrl: String = "",
@@ -8,4 +10,6 @@ data class CategoryStoreRsm(
         val bannerUrl: String = "",
         val bannerType: String = "",
         val bannerItemId: Int = 0,
+        val rating: String = "0.0",
+        val tags: List<Tags>? = null
 )

@@ -36,10 +36,15 @@ class SettingsRvAdapter : BaseAdapter<ItemProfileBinding, ProfileRsm>() {
                 }
             })
             root.setOnClickListener { onViewClicked(it, item, position) }
-            if (item.isApiPage)
-                ivProfile.load(item.apiPageImage)
+            if (item.isApiPage){
+                if (position == 2){
+                    ivProfile.setImageResource(R.drawable.meatzicon)
+                }else{
+                    ivProfile.load(item.apiPageImage)
+                }
+            }
             else
-                ivProfile.load(item.image)
+                   ivProfile.load(item.image)
             tvTitle.text = item.title
         }
     }

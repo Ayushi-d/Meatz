@@ -213,5 +213,10 @@ interface ApiService {
     @GET("logout")
     suspend fun logout(): Response<BaseRsm<Any>>
 
+    @GET("delete-account")
+    suspend fun deleteAccount(): Response<BaseRsm<Any>>
+
+    @GET("cart-count")
+    suspend fun cartCount(): Response<BaseRsm<Any>>
 
 }

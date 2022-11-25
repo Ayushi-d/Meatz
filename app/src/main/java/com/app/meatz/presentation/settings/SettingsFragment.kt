@@ -72,7 +72,7 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding>() {
                 ivFacebook.setOnClickListener {
                     requireActivity().openSocialLink("facebook", contacts.facebook)
                 }
-                ivTwitter.setOnClickListener { requireActivity().openSocialLink("twitter", contacts.twitter) }
+                ivTwitter.setOnClickListener { requireActivity().openSocialLink("twitter", "https://twitter.com/Meatzkw") }
                 ivInstagram.setOnClickListener { requireActivity().openSocialLink("instagram", contacts.instagram) }
             }
         }

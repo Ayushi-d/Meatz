@@ -55,6 +55,27 @@
                 android:layout_marginEnd="@dimen/_15sdp"
                 app:srcCompat="@drawable/ic_cart" />
 
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/cartCount"
+                android:layout_gravity="center_vertical|end"
+                app:cardBackgroundColor="@color/selectedRed">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" 0 "
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textColor="@color/alabaster"
+                    android:background="@color/selectedRed"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
         </FrameLayout>
 
     </androidx.appcompat.widget.Toolbar>

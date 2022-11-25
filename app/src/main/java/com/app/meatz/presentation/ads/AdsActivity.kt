@@ -24,6 +24,11 @@ class AdsActivity : BaseActivity<ActivityAdsBinding>() {
         intent?.let {
             adsUrl = it.getStringExtra(ADS_URL) ?: ""
         }
+        if (!viewModel.loginScreenIsShown() && adsUrl.isEmpty()){
+            startActivity(intentFor<AuthActivity>().clearTask().newTask())
+        }else if (viewModel.loginScreenIsShown() && adsUrl.isEmpty()){
+            startActivity(intentFor<MainActivity>().clearTask().newTask())
+        }
         binding.ivAds.loadWithPlaceHolder(adsUrl)
         handleViewsClicks()
     }

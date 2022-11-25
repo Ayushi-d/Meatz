@@ -1,12 +1,15 @@
 package com.app.meatz.presentation.home
 
+import android.app.LauncherActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_DRAGGING
 import androidx.viewpager2.widget.ViewPager2
 import com.app.meatz.R
 import com.app.meatz.core.BaseFragment
@@ -36,6 +39,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val bannerVPAdapter by lazy { BannerVpAdapter() }
     private val ourSelectionRvAdapter by lazy { OurSelectionRvAdapter() }
     private val ourBoxRvAdapter by lazy { OurBoxRvAdapter() }
+    val handler = Handler()
+    var origPosition: Int = 0
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getHome()
@@ -43,8 +48,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         handleViewsClicks()
         setLineWidth(binding.tvOurSelection, binding.line1)
         setLineWidth(binding.tvOurBoxes, binding.line2)
+        swipeRefresh()
 
     }
+
+
+    private fun swipeRefresh(){
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            binding.swipeRefreshLayout.isRefreshing = false
+            getHome()
+        }
+    }
+
 
     private fun getHome() {
 
@@ -97,6 +112,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
+
+
     private fun initBannerPager(sliderList: List<Slider>) {
         bannerVPAdapter.fill(sliderList)
         when {
@@ -104,9 +121,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 binding.vpBanner.gone()
                 binding.tabBanner.gone()
             }
-            sliderList.size == 1 -> binding.tabBanner.gone()
             else -> {
-
+                binding.vpBanner.visible()
                 binding.vpBanner.apply {
                     adapter = bannerVPAdapter
                     orientation = ViewPager2.ORIENTATION_HORIZONTAL
@@ -115,6 +131,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 TabLayoutMediator(binding.tabBanner, binding.vpBanner) { _, _ -> }.attach()
             }
         }
+
+        binding.vpBanner.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+
+                val runnable = Runnable {
+                    binding.vpBanner.setCurrentItem(position + 1)
+                    if (position == sliderList.size -1){
+                        binding.vpBanner.currentItem = 0
+                    }
+                }
+                if (position < binding.vpBanner.adapter?.itemCount ?: 0) {
+                    handler.postDelayed(runnable, 3000)
+                }
+            }
+        })
+
+
         bannerVPAdapter.setOnClickListener { _, item, _ ->
 
             val bundle = Bundle()

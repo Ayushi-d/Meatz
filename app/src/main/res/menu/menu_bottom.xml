@@ -8,9 +8,9 @@
         android:title="@string/main_home" />
 
     <item
-        android:id="@+id/offersFragment"
-        android:icon="@drawable/ic_offers"
-        android:title="@string/main_offers" />
+        android:id="@+id/myOrdersFragment"
+        android:icon="@drawable/my_order"
+        android:title="@string/profile_myorders" />
 
     <item
         android:id="@+id/myBoxesFragment"
@@ -21,8 +21,8 @@
         android:icon="@drawable/ic_profile"
         android:title="@string/main_profile" />
 
-    <item
-        android:id="@+id/settingsFragment"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/main_settings" />
+<!--    <item-->
+<!--        android:id="@+id/settingsFragment"-->
+<!--        android:icon="@drawable/ic_settings"-->
+<!--        android:title="@string/main_settings" />-->
 </menu>

@@ -9,34 +9,44 @@
 
     <include
         android:id="@+id/shimmer"
-        layout="@layout/shimmer_store_details" />
+        layout="@layout/shimmer_store_details"
+        android:visibility="gone"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clRoot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clShopInfo"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_14sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_14sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/clShopInfo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_50sdp"-->
+<!--            android:layout_marginStart="@dimen/_14sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_14sdp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bannerShop"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cdShop"
-                android:layout_width="@dimen/_45sdp"
-                android:layout_height="@dimen/_45sdp"
+                android:layout_width="@dimen/_46sdp"
+                android:layout_height="@dimen/_46sdp"
                 android:layout_margin="@dimen/_1sdp"
                 app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_23sdp"
                 app:cardElevation="@dimen/_2sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/bannerShop"
+                app:layout_constraintTop_toBottomOf="@+id/bannerShop">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivShop"
@@ -53,12 +63,13 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:textAlignment="center"
                 android:textColor="@color/heavy_metal"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@id/ivSort"
-                app:layout_constraintStart_toEndOf="@id/cdShop"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cdShop"
                 tools:text="Shop Name dfsdf  a ad ad ad ada ada ad" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -67,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:textColor="@color/merlot"
+                android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@id/cdShop"
                 app:layout_constraintTop_toBottomOf="@id/tvShopTitle"
                 tools:text="132 Items" />
@@ -76,6 +88,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_25sdp"
                 android:scaleType="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -86,13 +99,14 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_25sdp"
                 android:scaleType="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/ivFilter"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_sort" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
@@ -101,10 +115,9 @@
             app:tabMode="scrollable"
             android:layout_marginLeft="10dp"
             android:background="@color/transparent"
-            app:layout_constraintTop_toBottomOf="@id/clShopInfo">
+            app:layout_constraintTop_toBottomOf="@id/tvShopTitle">
 
         </com.google.android.material.tabs.TabLayout>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvProducts"

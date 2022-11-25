@@ -1,6 +1,9 @@
 package com.app.meatz.presentation.featureStores.storeDetails.adapter
 
 import android.graphics.Paint
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.app.meatz.R
 import com.app.meatz.core.BaseAdapter
 import com.app.meatz.data.application.ITEM_TYPE
@@ -34,7 +37,6 @@ class StoreProductsRvAdapter : BaseAdapter<ItemShopProductsBinding, ProductsRsm>
                 SecondaryLayout.visible()
                 PrimaryLayout.gone()
                 ivBanner.loadWithPlaceHolder(item.bannerUrl)
-
             }
         }
 

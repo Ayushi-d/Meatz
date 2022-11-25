@@ -150,6 +150,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), InstallStateUpdatedLis
             }
         }
     }
+    
+    private fun updateCartCount(){
+        
+    }
 
 
     override fun onStateUpdate(installState: InstallState) {

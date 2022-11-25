@@ -20,15 +20,16 @@ import com.app.meatz.data.utils.extensions.visible
 import com.app.meatz.data.utils.setSnackbar
 import com.app.meatz.databinding.FragmentStoreDetailsBinding
 import com.app.meatz.domain.local.ProductsRsm
-import com.app.meatz.domain.remote.Category
 import com.app.meatz.domain.remote.generalResponse.Banner
 import com.app.meatz.domain.remote.generalResponse.ProductData
+import com.app.meatz.domain.remote.shopDetails.CatProducts
 import com.app.meatz.domain.remote.shopDetails.StoreCategory
 import com.app.meatz.domain.remote.shopDetails.StoreDetails
-import com.app.meatz.domain.remote.stores.StoreCategories
 import com.app.meatz.presentation.featureStores.StoresViewModel
+import com.app.meatz.presentation.featureStores.storeDetails.adapter.ParentAdapter
 import com.app.meatz.presentation.featureStores.storeDetails.adapter.StoreProductsRvAdapter
 import com.app.meatz.presentation.home.MainActivity
+import com.google.android.material.tabs.TabLayout
 
 
 class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
@@ -51,7 +52,6 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
 
         revokeRecalling {
             getStoreDetails()
-            initShopProductsRv()
         }
 
         handleClicks()
@@ -74,15 +74,26 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
                     it?.data?.let {
                         initStoreView(it)
                         categoryList.addAll(it.categories)
-                       // filterDialog.setCategoriesList(it.categories as ArrayList<StoreCategory>)
-                        for (i in 0..it.categories.size - 1){
-                            if (it.categories[i].storeSubCategories.size > 0){
-                                for (j in 0..it.categories[i].storeSubCategories.size){
-                                    binding.shopTabLayout.addTab(binding.shopTabLayout.newTab().setText(it.categories[i].storeSubCategories[j].name.en))
-                                }
-                            }
+                        for (i in 0..it.store.products.size -1){
+                            binding.shopTabLayout.addTab(binding.shopTabLayout.newTab().setText(it.store.products[i].subCatName))
                         }
+                        binding.shopTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                            override fun onTabSelected(tab: TabLayout.Tab?) {
+                                binding.rvProducts.scrollToPosition(tab!!.position)
+                            }
+
+                            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+                            }
+
+                            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+                            }
+                        })
+                        initShopProductsRv(it.store.products)
+                        // filterDialog.setCategoriesList(it.categories as ArrayList<StoreCategory>)
                     }
+
                 }
                 ERROR -> {
                     binding.apply {
@@ -105,10 +116,11 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
             bannerListIsEmpty = true
         binding.apply {
             ivShop.loadWithPlaceHolder(storeDetails.store.logo)
+            bannerShop.loadWithPlaceHolder(storeDetails.store.banner)
             tvShopTitle.text = storeDetails.store.name
             if (storeDetails.store.products.isNotEmpty()) {
                 listIsEmpty.value = false
-                setProductsAdapter(storeDetails.store.products, storeDetails.banners)
+                setProductsAdapter(storeDetails.store.products[0].products, storeDetails.banners)
                 val storeSize = storeDetails.store.products.size
                     tvItemsNumber.text = "${storeSize} ${getString(R.string.shop_details_items)}"
 
@@ -180,11 +192,12 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
         })
     }
 
-    private fun initShopProductsRv() {
-        val gridlayout = GridLayoutManager(activity, 2)
+    private fun initShopProductsRv(catProducts: List<CatProducts>) {
+        val gridlayout = GridLayoutManager(activity, 1)
+        val parentAdapter = ParentAdapter(catProducts)
         binding.rvProducts.apply {
             layoutManager = gridlayout
-            adapter = shopProductsAdapter
+            adapter = parentAdapter
         }
         gridlayout.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
@@ -194,17 +207,23 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
                     return if (shopProductsAdapter.getItemType(position) == ITEM_TYPE)
                         1
                     else
-                        2
+                        1
                 }
 
             }
 
 
         }
+
+        parentAdapter.onItemClick = {
+            val bundle = Bundle()
+            bundle.putInt(PRODUCT_ID, it)
+            mainController.navigate(R.id.action_storeDetails_productDetails, bundle)
+        }
+
         shopProductsAdapter.setOnClickListener { _, item, _ ->
             when (item.itemType) {
                 ITEM_TYPE -> {
-
                     val bundle = Bundle()
                     if (item.productType == ITEM_SPECIAL_BOX) {
                         bundle.putInt(BOX_ID, item.productId)

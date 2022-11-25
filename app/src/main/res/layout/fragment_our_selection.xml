@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/catTabLayout"
             app:tabMode="scrollable"
+            android:visibility="gone"
             android:background="@color/transparent"
             app:layout_constraintTop_toBottomOf="@id/tvTitle">
 

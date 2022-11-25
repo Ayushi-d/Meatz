@@ -40,8 +40,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp"
-                app:strokeColor="@color/platinum1"
-                app:strokeWidth="0.5dp">
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clProduct"
@@ -201,8 +201,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp"
-                app:strokeColor="@color/platinum1"
-                app:strokeWidth="0.5dp">
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clBox"

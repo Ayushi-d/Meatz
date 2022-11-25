@@ -143,6 +143,34 @@
             app:popExitAnim="@anim/slide_right"
 
             />
+
+        <action
+            android:id="@+id/action_profile_contactus"
+            app:destination="@id/contactUsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            />
+
+        <action
+            android:id="@+id/action_profile_page"
+            app:destination="@id/pageFragment2"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+
+            />
+
+        <action
+            android:id="@+id/action_profile_notifications"
+            app:destination="@id/notificationsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+
     </fragment>
     <fragment
         android:id="@+id/myBoxesFragment"
@@ -227,7 +255,6 @@
             app:exitAnim="@anim/wait"
             app:popEnterAnim="@anim/wait"
             app:popExitAnim="@anim/slide_right"
-
             />
 
         <action

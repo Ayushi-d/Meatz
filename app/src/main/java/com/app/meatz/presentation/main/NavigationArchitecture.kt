@@ -34,7 +34,7 @@ class NavigationArchitecture(
         controller.addOnDestinationChangedListener { _, destination, _ ->
             defaultNavigation(destination)
             when (destination.id) {
-                R.id.homeFragment, R.id.offersFragment, R.id.myBoxesFragment -> {
+                R.id.homeFragment, R.id.myOrdersFragment, R.id.myBoxesFragment -> {
                     showBottomNavigation()
                     showNotificationIconAndHideBackIcon()
                     showCartIcon()
@@ -88,12 +88,12 @@ class NavigationArchitecture(
         if (fragmentBackStack.size > 1) {
             //we will check if this of
             when (fragmentBackStack.lastElement()) {
-                R.id.offersFragment, R.id.myBoxesFragment, R.id.profileFragment, R.id.settingsFragment -> {
+                R.id.myOrdersFragment, R.id.myBoxesFragment, R.id.profileFragment, R.id.settingsFragment -> {
                     if (controller.currentDestination?.id != R.id.orderDetailsFragment) {
                         fragmentBackStack.pop()
                     }
                     when (fragmentBackStack.lastElement()) {
-                        R.id.offersFragment, R.id.myBoxesFragment, R.id.profileFragment, R.id.settingsFragment -> {
+                        R.id.myOrdersFragment, R.id.myBoxesFragment, R.id.profileFragment, R.id.settingsFragment -> {
                             val fragmentId = fragmentBackStack.lastElement()
                             addToBackStack = false
                             controller.navigate(fragmentId)
@@ -175,6 +175,7 @@ class NavigationArchitecture(
         binding.apply {
             ivCart.gone()
             ivBack.gone()
+            cartCount.gone()
             ivNotification.gone()
         }
     }
@@ -189,10 +190,12 @@ class NavigationArchitecture(
 
     private fun hideCartIcon() {
         binding.ivCart.gone()
+        binding.cartCount.gone()
     }
 
     private fun showCartIcon() {
         binding.ivCart.visible()
+        binding.cartCount.visible()
     }
 
     private fun hideNotificationIconAndShowBackIcon() {
