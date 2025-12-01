@@ -8,6 +8,8 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.meatz.R
 import com.app.meatz.core.BaseFragment
 import com.app.meatz.data.application.SUBTOTAL
@@ -22,9 +24,11 @@ import com.app.meatz.data.utils.extensions.visible
 import com.app.meatz.data.utils.setSnackbar
 import com.app.meatz.databinding.FragmentCartBinding
 import com.app.meatz.domain.remote.Cart
+import com.app.meatz.domain.remote.StoreProducts
 import com.app.meatz.domain.remote.generalResponse.ProductData
 import com.app.meatz.presentation.cart.dialog.AddPhoneNumberDialog
 import com.app.meatz.presentation.cart.dialog.ContinueGuestDialog
+import com.app.meatz.presentation.featureStores.storeDetails.adapter.ParentAdapter
 import com.app.meatz.presentation.home.MainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -73,18 +77,20 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
 
     private fun refreshCartViews(cart: Cart) {
         cart.let {
-            if (it.products.isNotEmpty()) {
-                binding.tvItemsNumber.text = getString(R.string.cart_number, it.products.size.toString())
+            if (it.storeProducts.isNotEmpty()) {
+                //binding.tvItemsNumber.text = getString(R.string.cart_number, it.products.size.toString())
+                initCartRv(it.storeProducts)
+                binding.tvSubTotal.text = getString(R.string.global_currency, it.subtotal)
+
             } else
+
                 binding.tvItemsNumber.text = getString(R.string.cart_number, "0")
-            initCartRv(it.products)
-            binding.tvSubTotal.text = getString(R.string.global_currency, it.subtotal)
 
         }
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun initCartRv(productsList: MutableList<ProductData>) {
+    private fun initCartRv(productsList: MutableList<StoreProducts>) {
         if (productsList.isEmpty()) {
             binding.apply {
                 txtSubTotal.gone()
@@ -94,7 +100,12 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                 emptyLayout.visible()
             }
         } else {
-            cartRvAdapter.fill(productsList)
+            val parentAdapter = CartParentAdapter(productsList)
+//            binding.rvCart.apply {
+//                linearLayoutManager()
+//                adapter = parentAdapter
+//            }
+            //cartRvAdapter.fill(productsList)
             binding.apply {
                 txtSubTotal.visible()
                 btncheckout.visible()
@@ -103,19 +114,46 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                 emptyLayout.gone()
                 rvCart.apply {
                     linearLayoutManager()
-                    adapter = cartRvAdapter
+                    adapter = parentAdapter
+                }
+//                rvCart.apply {
+//                    linearLayoutManager()
+//                    adapter = cartRvAdapter
+//                }
+            }
+
+            parentAdapter.onItemDeleteClick = {
+                removeProductFromCart(it)
+            }
+
+            parentAdapter.onItemMinusClick = {
+                if (it.count != 1 && it.count != 0) {
+                    it.count = it.count - 1
+                    cartRvAdapter.notifyDataSetChanged()
+                    fillCartUpdatesData(it,false)
                 }
             }
+
+            parentAdapter.onItemPlusClick = {
+                if (it.count < it.num) {
+                    it.count = it.count + 1
+                    cartRvAdapter.notifyDataSetChanged()
+                    fillCartUpdatesData(it, true)
+                } else
+                    requireActivity().setSnackbar(binding.btncheckout, getString(R.string.box_details_max_quantity), true)
+
+            }
+
             cartRvAdapter.setOnClickListener { itemView, item, i ->
                 when (itemView.id) {
-                    R.id.flRemoveProduct, R.id.flRemoveBox -> {
-                        removeProductFromCart(item.cart_id)
-                    }
+//                    R.id.flRemoveProduct, R.id.flRemoveBox -> {
+//                        removeProductFromCart(item.cart_id)
+//                    }
                     R.id.tvProductPlus, R.id.tvBoxPlus -> {
                         if (item.count < item.num) {
                             item.count = item.count + 1
                             cartRvAdapter.notifyDataSetChanged()
-                            fillCartUpdatesData(item, i,true)
+                            fillCartUpdatesData(item,true)
                         } else
                             requireActivity().setSnackbar(binding.btncheckout, getString(R.string.box_details_max_quantity), true)
 
@@ -124,7 +162,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                         if (item.count != 1 && item.count != 0) {
                             item.count = item.count - 1
                             cartRvAdapter.notifyDataSetChanged()
-                             fillCartUpdatesData(item, i,false)
+                             fillCartUpdatesData(item,false)
                         }
                     }
                 }
@@ -139,9 +177,13 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                 SUCCESS -> {
                     dismissLoading()
                     requireActivity().setSnackbar(binding.btncheckout, it.message, true)
-                    it?.data?.let {
-                        subTotal = it.subtotal
-                        refreshCartViews(it)
+                    if (it.data != null){
+                        it?.data?.let {
+                            subTotal = it.subtotal
+                            refreshCartViews(it)
+                        }
+                    }else{
+
                     }
                 }
                 ERROR -> {
@@ -156,7 +198,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
         })
     }
 
-    fun fillCartUpdatesData(item: ProductData, position: Int, add: Boolean) {
+    fun fillCartUpdatesData(item: ProductData, add: Boolean) {
         val hashmap by lazy { HashMap<String, Any>() }
         val optionsId = ArrayList<Int>()
         if (item.options.isNotEmpty()) {
@@ -169,17 +211,17 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
         hashmap["count"] = if (add) 1 else -1
 
         Log.i("updatedCart", hashmap.entries.toString())
-        updateItems(hashmap, position)
+        updateItems(hashmap)
     }
 
-    fun updateItems(hashmap: HashMap<String, Any>, position: Int) {
+    fun updateItems(hashmap: HashMap<String, Any>) {
         viewModel.updateCartItemsCount(hashmap).observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 SUCCESS -> {
                     it?.data?.let {
                         subTotal = it.subtotal
                         refreshCartViews(it)
-                        binding.rvCart.scrollToPosition(position)
+                        //binding.rvCart.scrollToPosition(position)
                     }
                 }
                 ERROR -> {

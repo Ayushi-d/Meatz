@@ -1,42 +1,49 @@
 {
   "project_info": {
-    "project_number": "811030819013",
-    "project_id": "meatz-a924e",
-    "storage_bucket": "meatz-a924e.appspot.com"
+    "project_number": "403406081813",
+    "project_id": "meatz-aa3d3",
+    "storage_bucket": "meatz-aa3d3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:811030819013:android:607a6e7a8092f675c100ac",
+        "mobilesdk_app_id": "1:403406081813:android:da714bc44c887d67ee631c",
         "android_client_info": {
           "package_name": "com.app.meatz"
         }
       },
       "oauth_client": [
         {
-          "client_id": "811030819013-b857ugk0ofl2554tl3g5v535j07lcjkp.apps.googleusercontent.com",
+          "client_id": "403406081813-tms9cl3of8otc46bbipem5e3lkcrqerf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.app.meatz",
-            "certificate_hash": "97ace28ba029de107a16363d9bdf9c46a7e5be64"
+            "certificate_hash": "c137dc5554a15e7559ff68b683aa8cfa28ebe97e"
           }
         },
         {
-          "client_id": "811030819013-157jd7cm3dvo9fagkhlipsoq1058ei5q.apps.googleusercontent.com",
+          "client_id": "403406081813-obo59hlnhdl9a2ph0vr2ie1th7bv37nc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBfH6RKJxWlrDCR7SnM7HkPxoZkCTfGXRk"
+          "current_key": "AIzaSyCb_dBTE4_DqLqa5X5JhGhpQkh3zigaVBA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "811030819013-157jd7cm3dvo9fagkhlipsoq1058ei5q.apps.googleusercontent.com",
+              "client_id": "403406081813-obo59hlnhdl9a2ph0vr2ie1th7bv37nc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "403406081813-k242vimk11f5uo66chnmtj4qndf4j2ti.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kw.com.app.meatz"
+              }
             }
           ]
         }

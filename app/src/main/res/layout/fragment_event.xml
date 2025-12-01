@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_16sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/eventImage"
+        />
+
+    <TextView
+        android:id="@+id/ourPartners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/our_partners"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/heavy_metal"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/eventImage"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPartner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ourPartners"
+        />
+
+        <TextView
+            android:id="@+id/eventdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rvPartner"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textColor="@color/heavy_metal"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:text="Description"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/eventdescription"
+            android:text="@string/make_Resveration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            app:layout_constraintTop_toBottomOf="@id/eventdescription"
+            app:cardBackgroundColor="@color/heavy_metal"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:id="@+id/reservationCard"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMakeReservation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:gravity="center"
+                android:text="@string/make_Resveration"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hourslabel"
+            app:layout_constraintTop_toBottomOf="@+id/reservationCard"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/event_hours"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventHours"
+            app:layout_constraintTop_toBottomOf="@+id/hourslabel"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/event_hours"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationlabel"
+            app:layout_constraintTop_toBottomOf="@+id/eventHours"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/event_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventlocation"
+            app:layout_constraintTop_toBottomOf="@+id/locationlabel"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@string/event_location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactuslabel"
+            app:layout_constraintTop_toBottomOf="@+id/eventlocation"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/contactus"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventPhone"
+            app:layout_constraintTop_toBottomOf="@+id/contactuslabel"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventEmail"
+            app:layout_constraintTop_toBottomOf="@+id/eventPhone"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

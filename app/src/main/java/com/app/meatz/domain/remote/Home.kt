@@ -15,7 +15,9 @@ data class Home(
         @SerializedName("featured")
         val featured: List<Featured>,
         @SerializedName("sliders")
-        val sliders: List<Slider>
+        val sliders: List<Slider>,
+        @SerializedName("featured_products")
+        val featuredProducts: List<FeaturedProducts>
 )
 
 @Parcelize
@@ -39,6 +41,26 @@ data class Featured(
         @SerializedName("name")
         val name: String
 )
+
+data class FeaturedProductsBase(
+        @SerializedName("featured_products")
+        val featuredProducts: List<FeaturedProducts>,
+)
+
+data class FeaturedProducts(
+        @SerializedName("id")
+        val id: Int,
+        @SerializedName("image")
+        val image: String,
+        @SerializedName("name")
+        val name: String,
+        @SerializedName("price")
+        val price: String,
+        @SerializedName("price_before")
+        val price_before: String
+
+)
+
 data class Boxes(
         @SerializedName("id")
         val id: Int,
@@ -53,6 +75,9 @@ data class Boxes(
         @SerializedName("price_before")
         val priceBefore: Double = 0.0
 )
+
+@kotlinx.parcelize.Parcelize
+
 data class Slider(
         @SerializedName("id")
         val id: Int,
@@ -67,5 +92,7 @@ data class Slider(
         @SerializedName("status")
         val status: Int? = 0,
         @SerializedName("title")
-        val title: String? = ""
-)
+        val title: String? = "",
+        @SerializedName("type")
+        val type: String? = ""
+): Parcelable

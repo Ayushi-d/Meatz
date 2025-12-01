@@ -1,9 +1,10 @@
 package com.app.meatz.data.fcm
 
 import android.app.PendingIntent
-import android.app.PendingIntent.FLAG_MUTABLE
-import android.app.PendingIntent.FLAG_UPDATE_CURRENT
+import android.app.PendingIntent.*
+import android.content.Intent
 import android.util.Log
+import android.window.SplashScreen
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.TaskStackBuilder
 import com.app.meatz.data.application.ORDER_ID
@@ -34,6 +35,7 @@ class AppMessagingService : FirebaseMessagingService() {
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        Log.d(TAG, "Firebase message: ${remoteMessage.data}")
         remoteMessage.data.isNotEmpty().let {
             Log.d(TAG, "${remoteMessage.data}")
             sendNotification(remoteMessage.data)
@@ -62,7 +64,7 @@ class AppMessagingService : FirebaseMessagingService() {
                 val resultIntent = intentFor<SplashActivity>()
                 stackBuilder.addNextIntent(resultIntent)
                 val pendingIntent =
-                        stackBuilder.getPendingIntent(MANAGER_REQUEST_CODE, FLAG_UPDATE_CURRENT)
+                        stackBuilder.getPendingIntent(MANAGER_REQUEST_CODE, FLAG_IMMUTABLE)
                 with(NotificationManagerCompat.from(this)) {
                     pendingIntent?.let {
                         notify(MANAGER_REQUEST_CODE, notification.show(data.getValue("body"), it))

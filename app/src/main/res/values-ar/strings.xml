@@ -48,7 +48,7 @@
 
 
     <!--LanguageSelectionActivity start-->
-    <string name="lanauge_select_your_lanauge">اختر اللغة </string>
+    <string name="lanauge_select_your_lanauge">اختار اللغه اللي تناسبك ؟</string>
     <string name="language_arabic">العربية</string>
     <string name="language_english">الإنجليزية</string>
     <!--LanguageSelectionActivity end-->
@@ -72,6 +72,7 @@
     <string name="home_restaurant">مطـاعم</string>
     <string name="home_type_here">أكتب هنا</string>
     <string name="home_our_selection">إختيارتنا</string>
+    <string name="home_trending_products">تتجه المنتجات</string>
     <string name="home_our_box">صناديقنا</string>
     <string name="home_view_all">عرض الكل</string>
     <string name="home_no_box_msg">لا توجد صناديق متاحة حاليا</string>
@@ -91,7 +92,7 @@
 
     <!--BoxDetailsFragment start-->
     <string name="box_details_cart">سلة المشتريات</string>
-    <string name="box_details_add_to_cart">أضف الى السلة</string>
+    <string name="box_details_add_to_cart">أضف للسلة</string>
     <string name="box_details_max_quantity">لقد وصلت لأقصى كمية من هذا المنتج</string>
     <string name="box_details_cart_full">سلة المشتريات ممتلئة من متجر أخر \n تحتاج لحذفها ﻹضافة هذا المنتج </string>
     <string name="box_details_item_unavailable">هذا المنتج غير متاح الآن </string>
@@ -148,18 +149,18 @@
     <string name="login_password">كلمة المرور</string>
     <string name="login_forget_password">نسيت كلمة المرور؟</string>
     <string name="login_through">تسجيل الدخول من خلال</string>
-    <string name="login_contiue_guest">الاستمرار كزائر</string>
-    <string name="login_do_you_have_account">لا تملك حساب؟</string>
-    <string name="login_register_now"> <u>سجل الآن</u></string>
+    <string name="login_contiue_guest">سجل بعدين</string>
+    <string name="login_do_you_have_account">ماعندك حساب ؟</string>
+    <string name="login_register_now"> <u>سجل الحين</u></string>
     <string name="login_or">او</string>
     <string name="login_social_failure">فشل في تسجيل الدخول، يرجى المحاولة مرة اخرى !</string>
     <!--LoginFragment end-->
 
     <!--ForgetPasswordFragment start-->
-    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="forgot_password">سيت كلمة السر ؟</string>
     <string name="forgot_password_msg">يرجى إدخال عنوان البريد الإلكترونى الذي قمت بالتسجيل به</string>
     <string name="forgot_password_email">البريد الإلكتروني</string>
-    <string name="forgot_password_send">إرسال كلمة المرور</string>
+    <string name="forgot_password_send">إرسال كلمة السر</string>
     <string name="forgot_password_dialog_msg">تم إرسال رابط إعادة تعيين كلمة المرور على عنوان بريدك الإلكترونى الذي أدخلته</string>
     <string name="forgot_password_sent">تم إرسال كلمه المرور</string>
     <!--ForgetPasswordFragment end-->
@@ -174,17 +175,17 @@
 
     <!--ProfileFragment start-->
     <string name="profile_my_wallet">محفظتى</string>
-    <string name="profile_edit_profile">تعديل حسابي </string>
+    <string name="profile_edit_profile">تعديل حسابي</string>
     <string name="profile_myorders">طلباتى</string>
     <string name="profile_wishlist">المفضلة</string>
     <string name="profile_my_address">عناوينى</string>
-    <string name="profile_change_password">تغيير كلمة المرور </string>
-    <string name="profile_delete_account">حذف الحساب</string>
+    <string name="profile_change_password">تغيير كلمة السر</string>
+    <string name="profile_delete_account">امسح حسابي</string>
     <string name="profile_logout">تسجيل الخروج </string>
     <string name="profile_Delete">حذف الحساب</string>
     <string name="profile_logout_dialog_msg">هل أنت متأكد أنك تريد تسجيل الخروج ؟</string>
     <string name="profile_delete_dialog_msg">هل أنت متأكد أنك تريد حذف ؟</string>
-    <string name="profile_login_first_msg">من فضلك قم بتسجيل الدخول أولاً </string>
+    <string name="profile_login_first_msg">! ترا لازم تسجل أول ً </string>
     <!--ProfileFragment end-->
 
     <!--EditProfileFragment start-->
@@ -218,7 +219,7 @@
     <!--WishListFragment end-->
 
     <!--MyAddressFragment start-->
-    <string name="myaddress">عناوينى</string>
+    <string name="myaddress">عناويني</string>
     <string name="myaddress_saved_address"> عناوين محفوظة</string>
     <string name="myaddress_edit">تعديل</string>
     <string name="myaddress_add_new_address">إضافة عنوان جديد</string>
@@ -252,7 +253,7 @@
     <!--AddEditAddressFragment end-->
 
     <!--MyOrdersFragment start-->
-    <string name="myorders">طلباتى</string>
+    <string name="myorders">طلباتي</string>
     <string name="myorders_orderid">رقم الطلب</string>
     <string name="myorders_order_date">تاريخ الطلب</string>
     <string name="myorders_items">المنتجات : </string>
@@ -313,18 +314,21 @@
 
 
     <!--SettingsFragment start-->
-    <string name="settings_notification">الإشعارات</string>
+    <string name="settings_notification">إشعارات</string>
     <string name="settings_change_language">تغيير اللغة</string>
-    <string name="settings_about_meatz">من نحن</string>
+    <string name="settings_about_meatz">عنا</string>
     <string name="settings_terms">الشروط والأحكام</string>
-    <string name="settings_privacy_policy">سياسيه الخصوصية</string>
+    <string name="settings_privacy_policy">سياسة الخصوصية</string>
     <string name="settings_contact_us">اتصل بنا</string>
     <string name="settings_on">فتح</string>
     <string name="settings_off">غلق</string>
+    <string name="settings_wallet">المحفظة</string>
+    <string name="settings_langauge">اللغة</string>
+    <string name="settings_myorders">طلباتي</string>
     <!--SettingsFragment end-->
 
     <!--ContactusFragment start-->
-    <string name="contactus">اتصل بنا</string>
+    <string name="contactus">تواصل معن</string>
     <string name="contactus_send_message">ارسل رسالة</string>
     <string name="contactus_send">إرسال</string>
     <string name="contactus_name">الاسم *</string>
@@ -355,8 +359,8 @@
     <string name="cart">سلة المشتريات</string>
     <string name="cart_number"> %1$s منتج في السلة</string>
     <string name="cart_empty">سلة المشتريات فارغه</string>
-    <string name="cart_checkout">الاستمرار للدفع</string>
-    <string name="cart_sub_total">المجموع الفرعى</string>
+    <string name="cart_checkout">ادفع الحين</string>
+    <string name="cart_sub_total">مجموع الطلب</string>
     <string name="cart_continue_shopping">الاستمرار في التسوق</string>
     <string name="cart_continue_as_guest">الاستمرار كزائر</string>
     <string name="cart_sign_in">تسجيل الدخول</string>
@@ -377,7 +381,7 @@
     <string name="checkout_online">أونلاين</string>
     <string name="checkout_wallet">المحفظة</string>
     <string name="checkout_coupone_code">كود الخصم</string>
-    <string name="checkout_applied">تطبيق</string>
+    <string name="checkout_applied">تفعيل</string>
     <string name="checkout_enter_here">أدخل هنا</string>
     <string name="checkout_validation_empty_coupon">يرجى إدخال كوبون الخصم</string>
     <string name="checkout_coupon_used">تم استخدام هذا الكوبون من قبل</string>
@@ -390,19 +394,19 @@
     <string name="checkout_validation_select_time">يرجى إختيار وقت الطلب </string>
     <string name="checkout_promo_code_applied">تم تطبيق الخصم</string>
     <string name="checkout_invalid_code">كود الخصم غير صحيح</string>
-    <string name="checkout_total">المجموع الكلى</string>
+    <string name="checkout_total">المجموع الكلي</string>
     <string name="checkout_discount">الخصم</string>
     <string name="checkout_delivery_charge">رسوم التوصيل</string>
     <string name="checkout_product_total">إجمالي المنتجات</string>
     <string name="checkout_delivery_address">عنوان التوصيل</string>
-    <string name="checkout_add_new_address">إضافة عنوان جديد</string>
-    <string name="checkout_select_address">اختر عنوان</string>
+    <string name="checkout_add_new_address">ضيف عنوان جديد</string>
+    <string name="checkout_select_address">عناويني</string>
     <string name="checkout_payment">الاستمرار للدفع</string>
     <string name="checkout_box_hint_msg">سيتم تسليم الصناديق في خلال يوم الي يومين</string>
     <string name="checkout_no_address">لا يوجد عنوان</string>
     <string name="checkout_please_add_address">يرجى إضافة عنوان !</string>
     <string name="checkout_delivery_type">طريقة التوصيل</string>
-    <string name="checkout_select_date">إختر التاريخ</string>
+    <string name="checkout_select_date">اختار التاريخ</string>
     <string name="checkout_select_time">إختر الوقت</string>
     <string name="checkout_to">حتى</string>
     <string name="checkout_Express">سريع</string>
@@ -460,5 +464,38 @@
     <!-- ExceptionActivity end -->
     <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://bigakash.000webhostapp.com\",\n  }\n}]</string>
 
+    <!-- Events start -->
+    <string name="our_partners">الشركاء</string>
+    <string name="make_Resveration">احجز الآن</string>
+    <string name="confirm_Resveration">Confirm Reservation By Making Payment</string>
+    <string name="event_hours">الساعة</string>
+    <string name="event_location">الموقع</string>
+    <string name="pay_to_confirm">Pay To Confirm</string>
+    <string name="payment_completed">Payment Completed</string>
+    <string name="payment_success">Successfully</string>
+    <string name="order_number">Your Order Number Is</string>
+    <string name="thanks_message">Thank you for choosing us and we hope you will have a delicious and unique experience</string>
+    <string name="back_to_home">Back To Home Page</string>
+
+
+    <string name="event_addwaitinglist">ADD TO WAITING LIST</string>
+    <string name="event_addDetails">Adding your name on the waiting list will be subjected to slot availability</string>
+    <string name="event_ticket_type">Ticket Type</string>
+    <string name="event_khashta_size">Khashta Size</string>
+    <string name="event_date">Date</string>
+    <string name="event_customer_name">Customer Name</string>
+    <string name="event_email">Email</string>
+    <string name="event_mobile">Mobile Number</string>
+    <string name="event_special_request">SPECIAL REQUESTS OR ALLERGIES</string>
+    <string name="event_agree_terms">I agree to all Event Terms and Conditions</string>
+    <string name="event_cancel">Cancel</string>
+    <string name="event_next">Next</string>
+    <string name="event_ticket_select">Select</string>
+
+    <string name="ticket_select_validation">Please Select Ticket Type</string>
+    <string name="khashta_size_select_validation">Please Select Khashta Size Type</string>
+    <string name="date_select_validation">Please Select Booking Date</string>
+    <string name="customer_name_validation">Please Enter Customer Name</string>
+    <string name="radio_agree_validation">Please Accept All Event T&amp;C</string>
 
 </resources>

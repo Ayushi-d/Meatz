@@ -12,4 +12,5 @@ class StoresViewModel : ViewModel() {
     ) = loadData { RestClient.api.getStoreDetails(storeId, categoryId, sort) }
 
     fun getOurSelectionStores(subCategoryID: String) = loadData { RestClient.api.getFeaturesStores(subCategoryID) }
+    fun getFeaturedProducts() = loadData { RestClient.api.featuredProducts() }
 }

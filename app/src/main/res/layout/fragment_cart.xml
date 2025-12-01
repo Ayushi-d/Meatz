@@ -11,18 +11,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/alabaster"
+        android:background="@color/white"
         android:paddingTop="@dimen/_20sdp">
 
         <include
             android:id="@+id/shimmer"
+            android:visibility="gone"
             layout="@layout/shimmer_cart_fragment" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clRoot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -53,6 +54,7 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     android:textColor="@color/merlot"
                     android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvTitle"
                     tools:text="3 items" />
@@ -66,7 +68,7 @@
                     android:paddingEnd="@dimen/_12sdp"
                     app:layout_constraintBottom_toTopOf="@id/tvSubTotal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvItemsNumber" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView

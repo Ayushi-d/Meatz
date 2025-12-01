@@ -46,7 +46,7 @@ class NavigationArchitecture(
                     showCartIcon()
                     showLogo()
                 }
-                R.id.categoryShopsFragment, R.id.ourSelectionFragment, R.id.productDetailsFragment, R.id.offerBoxDetailsFragment -> {
+                R.id.categoryShopsFragment, R.id.ourSelectionFragment, R.id.trendingProducts, R.id.eventDetail, R.id.addEventDetail, R.id.productDetailsFragment, R.id.offerBoxDetailsFragment -> {
                     hideBottomNavigation()
                     hideNotificationIconAndShowBackIcon()
                     showCartIcon()

@@ -1,6 +1,7 @@
 package com.app.meatz.data.utils.extensions
 
 import android.graphics.drawable.Drawable
+import android.view.RoundedCorner
 import android.view.View
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
@@ -14,6 +15,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.transition.Transition
+import java.math.RoundingMode
 
 /**
  * Ahmed Elmokadim
@@ -28,6 +30,14 @@ fun ImageView.loadWithPlaceHolder(imageUrl: String, radius: Int = 1) {
             .error(R.drawable.placeholder_logo)
             .apply(RequestOptions.bitmapTransform(RoundedCorners(radius)))
             .into(this)
+}
+
+fun ImageView.loadWithPlaceHolderRound(imageUrl: String) {
+    GlideApp.with(this).load(imageUrl)
+        .placeholder(R.drawable.placeholder_logo)
+        .error(R.drawable.placeholder_logo)
+        .circleCrop()
+        .into(this)
 }
 
 /**

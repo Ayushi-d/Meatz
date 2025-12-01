@@ -18,9 +18,8 @@
 
         <FrameLayout
             android:id="@+id/flRemoveProduct"
-            android:layout_width="@dimen/_40sdp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-
             android:background="@drawable/bg_swip">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -41,7 +40,7 @@
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp"
                 app:strokeColor="@color/black"
-                app:strokeWidth="1dp">
+                app:strokeWidth="0dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clProduct"
@@ -52,7 +51,7 @@
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/ivProduct"
                         android:layout_width="@dimen/_70sdp"
-                        android:layout_height="@dimen/_65sdp"
+                        android:layout_height="@dimen/_100sdp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,6 +65,17 @@
                         app:layout_constraintStart_toEndOf="@id/ivProduct"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:text="Product Name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductDelete"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/selectedRed"
+                        app:layout_constraintEnd_toEndOf="@id/lnProductCount"
+                        app:layout_constraintTop_toTopOf="@id/tvProductName"
+                        tools:text="X" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tvOptions"
@@ -107,15 +117,24 @@
                         app:layout_constraintTop_toTopOf="@id/ivShop"
                         tools:text="Product Name" />
 
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/lnProductCount"
+                        app:layout_constraintStart_toStartOf="@id/ivShop"
+                        app:layout_constraintTop_toTopOf="@id/lnProductCount"
+                        tools:text="200.00KWD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:id="@+id/lnProductCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/bg_cart_counter"
                         android:orientation="horizontal"
-                        app:layout_constraintStart_toStartOf="@id/ivShop"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/ivShop">
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -124,6 +143,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:paddingStart="@dimen/_7sdp"
+                            android:background="@color/selectedRed"
                             android:paddingEnd="@dimen/_7sdp"
                             app:srcCompat="@drawable/ic_cartminus" />
 
@@ -133,7 +153,7 @@
                             android:layout_height="wrap_content"
                             android:paddingStart="@dimen/_9sdp"
                             android:paddingEnd="@dimen/_9sdp"
-                            android:textColor="@color/merlot"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_14ssp"
                             android:textStyle="bold"
                             tools:text="5" />
@@ -143,23 +163,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
+                            android:background="@color/selectedRed"
                             android:paddingStart="@dimen/_7sdp"
                             android:paddingEnd="@dimen/_7sdp"
-
                             app:srcCompat="@drawable/ic_cartplus" />
+
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvProductPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/merlot"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@id/lnProductCount"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/lnProductCount"
-                        tools:text="200.00KWD" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

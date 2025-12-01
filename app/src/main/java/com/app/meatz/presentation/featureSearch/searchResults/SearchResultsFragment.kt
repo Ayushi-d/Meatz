@@ -154,12 +154,12 @@ class SearchResultsFragment : BaseFragment<FragmentSearchResultsBinding>() {
 
         }
 
-        val gridlayout = GridLayoutManager(activity, 3)
+        val gridlayout = GridLayoutManager(activity, 1)
         binding.rvShops.apply {
             layoutManager = gridlayout
             adapter = storesRvAdapter
             if (this.itemDecorationCount == 0)
-                this.addItemDecoration(GridSpacingItemDecoration(3, 30, false))
+                this.addItemDecoration(GridSpacingItemDecoration(1, 30, false))
         }
         storesRvAdapter.setOnClickListener { _, item, _ ->
             val bundle = Bundle()

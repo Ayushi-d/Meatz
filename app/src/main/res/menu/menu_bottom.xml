@@ -12,10 +12,10 @@
         android:icon="@drawable/my_order"
         android:title="@string/profile_myorders" />
 
-    <item
-        android:id="@+id/myBoxesFragment"
-        android:icon="@drawable/ic_myboxes"
-        android:title="@string/main_myboxes" />
+<!--    <item-->
+<!--        android:id="@+id/myBoxesFragment"-->
+<!--        android:icon="@drawable/ic_myboxes"-->
+<!--        android:title="@string/main_myboxes" />-->
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_profile"

@@ -236,15 +236,27 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
         if (count != 1) {
             countLiveData.value = countLiveData.value?.minus(1)
             priceLiveData.value = priceLiveData.value?.minus((prodcutPrice + optionsPrice))
+            if (countLiveData.value!! > 1){
+                binding.tvMinusCard.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.merlot))
+            }else{
+                binding.tvMinusCard.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.lightCreamRed))
+            }
         }
+
     }
 
     private fun handlePlusClick(count: Int) {
         if (count < maxQuantity) {
             countLiveData.value = countLiveData.value?.plus(1)
             priceLiveData.value = priceLiveData.value?.plus((prodcutPrice + optionsPrice))
-        } else
+            if (countLiveData.value!! > 1){
+                binding.tvMinusCard.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.merlot))
+            }else{
+                binding.tvMinusCard.setCardBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.lightCreamRed))
+            }
+        } else{
             requireActivity().setSnackbar(binding.flProductSlider, getString(R.string.box_details_max_quantity), true)
+        }
     }
 
     private fun favUnFav() {

@@ -71,15 +71,15 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
                     android:background="@color/transparent"
                     android:drawableStart="@drawable/ic_envelope"
                     android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/login_email_address"
                     android:inputType="textEmailAddress"
                     android:paddingStart="@dimen/_10sdp"
-                    android:textColor="@color/heavy_metal"
-                    android:layout_marginEnd="@dimen/_5sdp"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/heavy_metal"
                     android:textColorHint="@color/heavy_metal"
                     android:textSize="@dimen/_11ssp" />
 

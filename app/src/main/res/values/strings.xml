@@ -49,7 +49,7 @@
 
     <!--LanguageSelectionActivity start-->
     <string name="lanauge_select_your_lanauge">Select your Language</string>
-    <string name="language_arabic">Arabic</string>
+    <string name="language_arabic">عربي</string>
     <string name="language_english">English</string>
     <!--LanguageSelectionActivity end-->
 
@@ -72,6 +72,7 @@
     <string name="home_restaurant">Restaurants</string>
     <string name="home_type_here">Type here</string>
     <string name="home_our_selection">Our Selection</string>
+    <string name="home_trending_products">Trending Products</string>
     <string name="home_our_box">Our Boxes</string>
     <string name="home_view_all">View All</string>
     <string name="home_no_box_msg">There are no boxes added by the admin</string>
@@ -323,6 +324,9 @@
     <string name="settings_contact_us">Contact Us</string>
     <string name="settings_on">on</string>
     <string name="settings_off">off</string>
+    <string name="settings_wallet">Wallet</string>
+    <string name="settings_langauge">Language</string>
+    <string name="settings_myorders">My Orders</string>
     <!--SettingsFragment end-->
 
     <!--ContactusFragment start-->
@@ -461,6 +465,42 @@
     <!-- ExceptionActivity end -->
 
     <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://bigakash.000webhostapp.com\",\n  }\n}]</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Events start -->
+    <string name="our_partners">Our Partners</string>
+    <string name="make_Resveration">Make Reservation</string>
+    <string name="confirm_Resveration">Confirm Reservation By Making Payment</string>
+    <string name="event_hours">Hours</string>
+    <string name="event_location">Loation</string>
+    <string name="pay_to_confirm">Pay To Confirm</string>
+    <string name="payment_completed">Payment Completed</string>
+    <string name="payment_success">Successfully</string>
+    <string name="order_number">Your Order Number Is</string>
+    <string name="thanks_message">Thank you for choosing us and we hope you will have a delicious and unique experience</string>
+    <string name="back_to_home">Back To Home Page</string>
+
+    <string name="event_addwaitinglist">ADD TO WAITING LIST</string>
+    <string name="event_addDetails">Adding your name on the waiting list will be subjected to slot availability</string>
+    <string name="event_ticket_type">Ticket Type</string>
+    <string name="event_khashta_size">Khashta Size</string>
+    <string name="event_date">Date</string>
+    <string name="event_customer_name">Customer Name</string>
+    <string name="event_email">Email</string>
+    <string name="event_mobile">Mobile Number</string>
+    <string name="event_special_request">SPECIAL REQUESTS OR ALLERGIES</string>
+    <string name="event_agree_terms">I agree to all Event Terms and Conditions</string>
+    <string name="event_cancel">Cancel</string>
+    <string name="event_next">Next</string>
+    <string name="event_ticket_select">Select</string>
+
+    <string name="ticket_select_validation">Please Select Ticket Type</string>
+    <string name="khashta_size_select_validation">Please Select Khashta Size Type</string>
+    <string name="date_select_validation">Please Select Booking Date</string>
+    <string name="customer_name_validation">Please Enter Customer Name</string>
+    <string name="radio_agree_validation">Please Accept All Event T&amp;C</string>
+
 
 
 </resources>

@@ -25,12 +25,15 @@ import com.app.meatz.data.utils.setSnackbar
 import com.app.meatz.databinding.FragmentHomeBinding
 import com.app.meatz.domain.remote.Boxes
 import com.app.meatz.domain.remote.Featured
+import com.app.meatz.domain.remote.FeaturedProducts
 import com.app.meatz.domain.remote.Slider
 import com.app.meatz.presentation.home.adapter.BannerVpAdapter
 import com.app.meatz.presentation.home.adapter.OurBoxRvAdapter
 import com.app.meatz.presentation.home.adapter.OurSelectionRvAdapter
+import com.app.meatz.presentation.home.adapter.TrendingProductsRvAdapter
 import com.app.meatz.presentation.shared.MainCategoryRvAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import java.nio.BufferUnderflowException
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -38,6 +41,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val mainCategoryAdapter by lazy { MainCategoryRvAdapter(DISABLE_SELECTED_VIEW_OPTIONS) }
     private val bannerVPAdapter by lazy { BannerVpAdapter() }
     private val ourSelectionRvAdapter by lazy { OurSelectionRvAdapter() }
+    private val ourTrendingProductsRvAdapter by lazy { TrendingProductsRvAdapter() }
     private val ourBoxRvAdapter by lazy { OurBoxRvAdapter() }
     val handler = Handler()
     var origPosition: Int = 0
@@ -82,6 +86,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                         initBannerPager(it.sliders)
                         initOurSelectionRv(it.featured)
                         initOurBoxRv(it.boxes)
+                        initFeaturedProductsRv(it.featuredProducts)
                     }
 
                 }
@@ -150,22 +155,26 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
 
         bannerVPAdapter.setOnClickListener { _, item, _ ->
-
             val bundle = Bundle()
-            when (item.model) {
-                BANNER_PRODUCT -> {
-                    item.modelId?.let { bundle.putInt(PRODUCT_ID, it) }
-                    mainController.navigate(R.id.action_home_productDetails, bundle)
-                }
-                BANNER_BOX -> {
-                    item.modelId?.let { bundle.putInt(BOX_ID, it) }
-                    mainController.navigate(R.id.action_home_boxDetails, bundle)
-                }
-                BANNER_STORE -> {
-                    item.modelId?.let { bundle.putInt(SHOP_ID, it) }
-                    mainController.navigate(R.id.action_home_shopDetails, bundle)
-                }
+            if (item.type == "carnival"){
+                item.id?.let { bundle.putInt(CARNIVAL_ID,it) }
+                mainController.navigate(R.id.action_banner_eventDetail,bundle)
             }
+
+//            when (item.model) {
+//                BANNER_PRODUCT -> {
+//                    item.modelId?.let { bundle.putInt(PRODUCT_ID, it) }
+//                    mainController.navigate(R.id.action_home_productDetails, bundle)
+//                }
+//                BANNER_BOX -> {
+//                    item.modelId?.let { bundle.putInt(BOX_ID, it) }
+//                    mainController.navigate(R.id.action_home_boxDetails, bundle)
+//                }
+//                BANNER_STORE -> {
+//                    item.modelId?.let { bundle.putInt(SHOP_ID, it) }
+//                    mainController.navigate(R.id.action_home_shopDetails, bundle)
+//                }
+//            }
 
         }
     }
@@ -184,6 +193,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             val bundle = Bundle()
             bundle.putInt(SHOP_ID, item.id)
             mainController.navigate(R.id.action_home_shopDetails, bundle)
+        }
+    }
+
+    private fun initFeaturedProductsRv(featuredProducts: List<FeaturedProducts>){
+        ourTrendingProductsRvAdapter.fill(featuredProducts)
+        if (featuredProducts.isEmpty())
+            binding.rlOurSelection.gone()
+        else
+            binding.rvTrendingProducts.apply {
+                linearLayoutManager(RecyclerView.HORIZONTAL)
+                adapter = ourTrendingProductsRvAdapter
+            }
+
+        ourTrendingProductsRvAdapter.setOnClickListener { _, item, _ ->
+            val bundle = Bundle()
+            bundle.putInt(PRODUCT_ID, item.id)
+            mainController.navigate(R.id.productDetailsFragment, bundle)
         }
     }
 
@@ -224,6 +250,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             }
             tvViewallboxes.setOnClickListener {
                 mainController.navigate(R.id.action_home_ourBoxes)
+            }
+
+            tvViewallProducts.setOnClickListener{
+                mainController.navigate(R.id.action_home_trendingProducts)
             }
 
             flSearch.setOnClickListener { mainController.navigate(R.id.action_home_search) }

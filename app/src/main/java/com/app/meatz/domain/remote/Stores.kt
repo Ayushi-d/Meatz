@@ -12,8 +12,8 @@ data class Stores(
         val storeData: List<StoreData>,
         @SerializedName("cart")
         val cart: Cart,
-        @SerializedName("categories")
-        val categories : List<StoreCategories>
+//        @SerializedName("categories")
+//        val categories : List<StoreCategories>
 )
 
 

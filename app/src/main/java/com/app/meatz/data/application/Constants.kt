@@ -68,6 +68,8 @@ const val MEATZ_WHATSAPP = "MeatzWhatsapp"
 
 const val PRODUCT_ID = "ProductId"
 const val SUBTOTAL = "SubTotal"
+const val CARNIVAL_ID = "CarnivalId"
+const val BOOKING_ID = "booking_id"
 
 const val CHECKOUT_STATUS_OBJ = "CheckoutStatus"
 const val PAYMENT_URL = "PaymentUrl"

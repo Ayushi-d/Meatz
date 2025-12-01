@@ -36,6 +36,7 @@
     <color name="davysGray1">#464646</color>
     <color name="selectedRed">#F17877</color>
     <color name="lightRed">#E5C6C5</color>
+    <color name="lightCreamRed">#E9C4C4</color>
 
 
 
@@ -47,5 +48,7 @@
     <color name="placeholder">#2A2B2AA8</color>
 
   <color name="lightGray">#D2D1D7</color>
+
+  <color name="success">#007500</color>
 
 </resources>

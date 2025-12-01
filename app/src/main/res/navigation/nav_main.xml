@@ -35,8 +35,17 @@
             app:exitAnim="@anim/wait"
             app:popEnterAnim="@anim/wait"
             app:popExitAnim="@anim/slide_right"
-
             />
+
+        <action
+            android:id="@+id/action_home_trendingProducts"
+            app:destination="@id/trendingProducts"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            />
+
         <action
             android:id="@+id/action_home_ourBoxes"
             app:destination="@id/ourBoxesFragment"
@@ -91,6 +100,15 @@
             app:popEnterAnim="@anim/wait"
             app:popExitAnim="@anim/slide_right"
 
+            />
+
+        <action
+            android:id="@+id/action_banner_eventDetail"
+            app:destination="@id/eventDetail"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
             />
 
     </fragment>
@@ -317,7 +335,79 @@
             app:exitAnim="@anim/wait"
             app:popEnterAnim="@anim/wait"
             app:popExitAnim="@anim/slide_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetail"
+        android:name="com.app.meatz.presentation.events.EventDetailFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event">
+        <action
+            android:id="@+id/action_add_event_detail"
+            app:destination="@id/addEventDetail"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventDetail"
+        android:name="com.app.meatz.presentation.events.AddEventDetailFragment"
+        android:label="fragment_addeventdetails"
+        tools:layout="@layout/fragment_addeventdetails">
+        <action
+            android:id="@+id/action_event_summary"
+            app:destination="@id/eventSummaryPage"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/eventSummaryPage"
+        android:name="com.app.meatz.presentation.events.EventSummaryFragment"
+        android:label="fragment_event_summary"
+        tools:layout="@layout/fragment_event_summary">
 
+        <action
+            android:id="@+id/action_event_Payment"
+            app:destination="@id/eventPaymentPage"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
+            />
+
+        <action
+            android:id="@+id/action_checkout_payment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventPaymentPage"
+        android:name="com.app.meatz.presentation.events.EventPaymentFragment"
+        android:label="fragment_event_payment"
+        tools:layout="@layout/fragment_event_payment"
+        >
+
+    </fragment>
+    <fragment
+        android:id="@+id/trendingProducts"
+        android:name="com.app.meatz.presentation.featuredProducts.TrendingProducstFragment"
+        android:label="fragment_trending_products"
+        tools:layout="@layout/fragment_trending_products">
+        <action
+            android:id="@+id/productDetailsFragment"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait"
+            app:popEnterAnim="@anim/wait"
+            app:popExitAnim="@anim/slide_right"
             />
     </fragment>
     <fragment

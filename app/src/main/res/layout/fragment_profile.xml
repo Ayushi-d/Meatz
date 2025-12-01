@@ -112,7 +112,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="My orders"
+                                android:text="@string/settings_myorders"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -133,7 +133,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Wallet"
+                                android:text="@string/settings_wallet"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -154,7 +154,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Notifiations"
+                                android:text="@string/settings_notification"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -175,7 +175,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Langauge"
+                                android:text="@string/settings_langauge"
                                 android:gravity="center"/>
 
                         </LinearLayout>

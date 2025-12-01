@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_20sdp">
+
+    <TextView
+        android:id="@+id/tvReservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/heavy_metal"
+        android:text="@string/make_Resveration"
+        android:textSize="@dimen/_18sdp"
+        android:textAlignment="center" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashedView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_dashed"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvReservation">
+
+        <TextView
+            android:id="@+id/tvEventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:maxLines="3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"
+            android:textColor="@color/selectedRed"/>
+
+        <TextView
+            android:id="@+id/tvEventPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventName"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"
+            android:textColor="@color/heavy_metal"/>
+
+        <TextView
+            android:id="@+id/tvKhashtaSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventPrice"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/heavy_metal"/>
+
+        <TextView
+            android:id="@+id/tvEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvKhashtaSize"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/heavy_metal"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/dashedView"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/confirm_Resveration"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/heavy_metal"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_44sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:cardBackgroundColor="@color/heavy_metal"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:id="@+id/reservationCard"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPayToConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/pay_to_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

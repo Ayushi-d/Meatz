@@ -9,6 +9,7 @@
 
     <include
         android:id="@+id/shimmer"
+
         layout="@layout/shimmer_checkout" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -201,14 +201,15 @@ class StoreDetailsFragment : BaseFragment<FragmentStoreDetailsBinding>() {
         }
         gridlayout.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
-                if (bannerListIsEmpty)
-                    return 1
-                else {
-                    return if (shopProductsAdapter.getItemType(position) == ITEM_TYPE)
-                        1
-                    else
-                        1
-                }
+                return 1
+//                if (bannerListIsEmpty)
+//                    return 1
+//                else {
+//                    return if (shopProductsAdapter.getItemType(position) == ITEM_TYPE)
+//                        1
+//                    else
+//                        1
+//                }
 
             }
 

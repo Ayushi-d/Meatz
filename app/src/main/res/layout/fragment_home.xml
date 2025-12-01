@@ -144,12 +144,59 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/rlOurBoxes"
+                    android:id="@+id/rlTrendingProducts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    tools:visibility="gone"
                     android:layout_marginTop="@dimen/_10sdp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/rlOurSelection">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_13sdp"
+                        android:id="@+id/tvTrendingProducts"
+                        android:text="@string/home_trending_products"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/heavy_metal" />
+
+                    <View
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:id="@+id/line3"
+                        android:layout_below="@id/tvTrendingProducts"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:background="@color/merlot" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvViewallProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/home_view_all"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/merlot" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTrendingProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line3"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOurBoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rlTrendingProducts">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:textStyle="bold"
@@ -233,6 +280,7 @@
                     android:layout_marginStart="@dimen/_12sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
+                    android:visibility="gone"
                     android:background="@color/darkblue"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

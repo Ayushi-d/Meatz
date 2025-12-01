@@ -18,16 +18,17 @@ class CartRvAdapter : BaseAdapter<ItemCartBinding, ProductData>() {
     private val viewBinderHelper = ViewBinderHelper()
     override fun setContent(binding: ItemCartBinding, item: ProductData, position: Int) {
         binding.apply {
-            flRemoveProduct.setOnClickListener { onViewClicked(it, item, position) }
+            //flRemoveProduct.setOnClickListener { onViewClicked(it, item, position) }
             flRemoveBox.setOnClickListener { onViewClicked(it, item, position) }
             tvBoxPlus.setOnClickListener { onViewClicked(it, item, position) }
             tvProductPlus.setOnClickListener { onViewClicked(it, item, position) }
             tvBoxMinus.setOnClickListener { onViewClicked(it, item, position) }
             tvProductMinus.setOnClickListener { onViewClicked(it, item, position) }
-            if (item.type == ITEM_PRODUCT_TYPE)
-                handleProductsView(binding, item,position)
-            else
-                handleBoxViews(binding, item)
+
+//            if (item.type == ITEM_PRODUCT_TYPE)
+//               // handleProductsView(binding, item,position)
+//            else
+//               // handleBoxViews(binding, item)
         }
     }
 
@@ -48,11 +49,11 @@ class CartRvAdapter : BaseAdapter<ItemCartBinding, ProductData>() {
                 tvStoreName.text = item.store.name
                 ivShop.loadWithPlaceHolder(item.store.logo, 20)
             }
-            viewBinderHelper.bind(rootProduct, item.id.toString())
-            if (LocaleHelper.locale == "en")
-                rootProduct.dragEdge = SwipeRevealLayout.DRAG_EDGE_RIGHT
-            else
-                rootProduct.dragEdge = SwipeRevealLayout.DRAG_EDGE_LEFT
+//            viewBinderHelper.bind(rootProduct, item.id.toString())
+//            if (LocaleHelper.locale == "en")
+//                rootProduct.dragEdge = SwipeRevealLayout.DRAG_EDGE_RIGHT
+//            else
+//                rootProduct.dragEdge = SwipeRevealLayout.DRAG_EDGE_LEFT
 
 
             tvProductCount.text = item.count.toString()

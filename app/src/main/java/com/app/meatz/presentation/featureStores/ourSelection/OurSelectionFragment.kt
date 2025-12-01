@@ -30,7 +30,7 @@ class OurSelectionFragment : BaseFragment<FragmentOurSelectionBinding>() {
     private val shopAdapter by lazy { StoressRvAdapter() }
     private val viewModel by viewModels<StoresViewModel>()
     private var selectedSubCategoryId: String = ""
-    private var categoryList  = ArrayList<StoreCategories>()
+    //private var categoryList  = ArrayList<StoreCategories>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         revokeRecalling {
@@ -75,14 +75,14 @@ class OurSelectionFragment : BaseFragment<FragmentOurSelectionBinding>() {
                             shimmer.root.gone()
                         }
                         shopAdapter.fill(it.storeData)
-                        categoryList.addAll(it.categories)
-                        for (i in 0..it.categories.size){
-                            if (it.categories[i].subcategories.size > 0){
-                                for (j in 0..it.categories[i].subcategories.size){
-                                    binding.catTabLayout.addTab(binding.catTabLayout.newTab().setText(it.categories[i].subcategories[j].name.en))
-                                }
-                            }
-                        }
+                        //categoryList.addAll(it.categories)
+//                        for (i in 0..it.categories.size){
+//                            if (it.categories[i].subcategories.size > 0){
+//                                for (j in 0..it.categories[i].subcategories.size){
+//                                    binding.catTabLayout.addTab(binding.catTabLayout.newTab().setText(it.categories[i].subcategories[j].name.en))
+//                                }
+//                            }
+//                        }
                     }
                 }
                 ERROR -> {

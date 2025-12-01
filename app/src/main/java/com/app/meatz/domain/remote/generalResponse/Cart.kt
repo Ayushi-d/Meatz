@@ -6,5 +6,5 @@ data class Cart(
         @SerializedName("count")
         val count: Int,
         @SerializedName("total")
-        val total: Int
+        val total: Double
 )

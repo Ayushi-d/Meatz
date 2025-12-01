@@ -57,10 +57,6 @@ class SplashVideoMeatz : AppCompatActivity() {
         setContentView(R.layout.activity_splash_video_meatz)
         simpleVideoView = findViewById(R.id.videoView)
         simpleVideoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.video))
-        val mediaController = MediaController(this)
-        mediaController.setAnchorView(simpleVideoView)
-        mediaController.setMediaPlayer(simpleVideoView)
-        simpleVideoView!!.setMediaController(mediaController)
         simpleVideoView!!.requestFocus()
         simpleVideoView!!.start()
 
@@ -161,7 +157,4 @@ class SplashVideoMeatz : AppCompatActivity() {
             }
         }
     }
-
-
 }
-

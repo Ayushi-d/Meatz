@@ -60,6 +60,7 @@ ext {
 
             //Video
             exoplayer         :'com.google.android.exoplayer:exoplayer:2.15.0',
+
     ]
 
     annotationDependency = [

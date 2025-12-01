@@ -42,6 +42,9 @@ interface ApiService {
     @GET("clear_cart")
     suspend fun deleteCart(): Response<BaseRsm<DeleteCart>>
 
+    @GET("featured_products")
+    suspend fun featuredProducts(): Response<BaseRsm<FeaturedProductsBase>>
+
     @GET("stores")
     suspend fun getStores(@Query("category_id") categoryId: Int): Response<BaseRsm<Stores>>
 
@@ -218,5 +221,18 @@ interface ApiService {
 
     @GET("cart-count")
     suspend fun cartCount(): Response<BaseRsm<Any>>
+
+    @GET("carnival/{slider_id}")
+    suspend fun getCarnivalDetail(@Path("slider_id") sliderId: Int): Response<BaseRsm<Carnival>>
+
+    @GET("carnivals/ticket_types")
+    suspend fun getCarnivalTickets(): Response<BaseRsm<List<CarnivalTickets>>>
+
+    @GET("carnivals/khashta_sizes")
+    suspend fun getCarnivalKhashtaSizes(): Response<BaseRsm<List<CarnivalKhashtaSize>>>
+
+    @POST("carnivals/booking")
+    @FormUrlEncoded
+    suspend fun carnivalBooking(@FieldMap hashMap: HashMap<String, Any>): Response<BaseRsm<CarnivalBooking>>
 
 }

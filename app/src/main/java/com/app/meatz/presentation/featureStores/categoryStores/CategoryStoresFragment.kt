@@ -1,6 +1,8 @@
 package com.app.meatz.presentation.featureStores.categoryStores
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
@@ -136,7 +138,7 @@ class CategoryStoresFragment : BaseFragment<FragmentCategoryStoresBinding>() {
             storesAndBanerList[parentIndex] =
                     CategoryStoreRsm(ITEM_TYPE, storeUrl = storesList[index].logo, storeName = storesList[index].name, storeId = storesList[index].id, bannerUrl = storesList[index].banner, tags = storesList[index].tags, rating = storesList[index].rating)
         }
-
+        Log.d(TAG, "setStoresAdapter: data------"+storesAndBanerList.toList().toString())
         categoryShopsAdapter.fill(storesAndBanerList.toList() as List<CategoryStoreRsm>)
 
     }

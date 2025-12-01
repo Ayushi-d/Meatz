@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbarThumbVertical="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/addtoWaitingList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_addwaitinglist"
+                android:textAlignment="center"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addtoWaitingList" />
+
+            <TextView
+                android:id="@+id/addDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="@string/event_addDetails"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/addtoWaitingList" />
+
+            <TextView
+                android:id="@+id/ticketLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_ticket_type"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/addDescription" />
+
+
+            <FrameLayout
+                android:id="@+id/flselectedTicket"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_spinner"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ticketLabel">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:background="@android:color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/event_ticket_select"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_11ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:tint="@color/selectedRed"
+                    app:srcCompat="@drawable/ic_down_arrow" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/KhastaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_khashta_size"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flselectedTicket" />
+
+            <FrameLayout
+                android:id="@+id/khashtaCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_spinner"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/dateCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/KhastaLabel">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spKhashta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:background="@android:color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvKhasta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/event_ticket_select"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:tint="@color/selectedRed"
+                    app:srcCompat="@drawable/ic_down_arrow" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/dateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_date"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/dateCard"
+                app:layout_constraintTop_toBottomOf="@+id/flselectedTicket" />
+
+            <FrameLayout
+                android:id="@+id/dateCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_spinner"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/khashtaCard"
+                app:layout_constraintTop_toBottomOf="@id/KhastaLabel">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/event_ticket_select"
+                    android:textColor="@color/heavy_metal"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:tint="@color/selectedRed"
+                    app:srcCompat="@drawable/ic_down_arrow" />
+
+            </FrameLayout>
+
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                app:layout_constraintTop_toBottomOf="@+id/dateCard"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/customerLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_customer_name"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+            <EditText
+                android:id="@+id/customerField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_spinner"
+                android:hint="@string/event_customer_name"
+                android:padding="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/customerLabel" />
+
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_email"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/customerField" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_spinner"
+                android:hint="@string/event_email"
+                android:padding="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
+
+
+            <TextView
+                android:id="@+id/mobileLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_mobile"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/emailField" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mobileField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_spinner"
+                android:hint="@string/event_mobile"
+                android:padding="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/mobileLabel" />
+
+
+            <TextView
+                android:id="@+id/specialRequestLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/event_special_request"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/mark"
+                app:layout_constraintTop_toBottomOf="@+id/mobileField" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/spclField"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="top"
+                android:background="@drawable/bg_spinner"
+                android:gravity="top"
+                android:hint="@string/event_special_request"
+                android:padding="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/specialRequestLabel" />
+
+
+            <RadioButton
+                android:id="@+id/agreeRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/selectedRed"
+                android:text="@string/event_agree_terms"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spclField" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_spinner"
+                android:gravity="center"
+                android:text="@string/event_cancel"
+                android:textColor="@color/heavy_metal"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tvNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agreeRadio" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNext"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_44sdp"
+                android:background="@drawable/bg_next_btn"
+                android:gravity="center"
+                android:text="@string/event_next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvCancel"
+                app:layout_constraintTop_toBottomOf="@id/agreeRadio" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
